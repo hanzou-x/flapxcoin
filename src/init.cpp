@@ -567,7 +567,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         SoftSetBoolArg("-listen", false);
 
         // to protect privacy, do not discover addresses by default
-        if (SoftSetBoolArg("-discover", false));
+        SoftSetBoolArg("-discover", false);
     }
 
     if (!GetBoolArg("-listen", true)) {
@@ -717,7 +717,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
         // try moving the database env out of the way
         boost::filesystem::path pathDatabase = GetDataDir() / "database";
-        boost::filesystem::path pathDatabaseBak = GetDataDir() / strprintf("database.%d.bak", GetTime());
+        boost::filesystem::path pathDatabaseBak = GetDataDir() / strprintf("database.%" PRId64 ".bak", GetTime());
         try {
             boost::filesystem::rename(pathDatabase, pathDatabaseBak);
             printf("Moved old %s to %s. Retrying.\n", pathDatabase.string().c_str(), pathDatabaseBak.string().c_str());
