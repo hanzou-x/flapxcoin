@@ -1342,7 +1342,7 @@ void ThreadMapPort2(void* parg)
         }
 
         string strDesc = "NetCoin " + FormatFullVersion();
-   /*
+#if 0
 #ifndef UPNPDISCOVER_SUCCESS
         /* miniupnpc 1.5 *
         r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
@@ -1371,7 +1371,7 @@ void ThreadMapPort2(void* parg)
             }
             if (i % 600 == 0) // Refresh every 20 minutes
             {
-  */
+#endif
         try {
           while (true) {
 #ifndef UPNPDISCOVER_SUCCESS
@@ -1408,6 +1408,7 @@ void ThreadMapPort2(void* parg)
         freeUPNPDevlist(devlist); devlist = 0;
         if (r != 0)
             FreeUPNPUrls(&urls);
+#if 0
    /*     while (true)
         {
             if (fShutdown || !fUseUPnP)
@@ -1415,6 +1416,7 @@ void ThreadMapPort2(void* parg)
             MilliSleep(2000);
         }
    */
+#endif
     }
 }
 
@@ -2404,7 +2406,8 @@ bool StopNode()
     if (semOutbound)
         for (int i=0; i<MAX_OUTBOUND_CONNECTIONS; i++)
             semOutbound->post();
- /*   do
+#if 0
+    do
     {
         int nThreadsRunning = 0;
         for (int n = 0; n < THREAD_MAX; n++)
@@ -2415,7 +2418,7 @@ bool StopNode()
             break;
         MilliSleep(20);
     } while(true);
- /*   if (vnThreadsRunning[THREAD_SOCKETHANDLER] > 0) printf("ThreadSocketHandler still running\n");
+    if (vnThreadsRunning[THREAD_SOCKETHANDLER] > 0) printf("ThreadSocketHandler still running\n");
     if (vnThreadsRunning[THREAD_OPENCONNECTIONS] > 0) printf("ThreadOpenConnections still running\n");
     if (vnThreadsRunning[THREAD_MESSAGEHANDLER] > 0) printf("ThreadMessageHandler still running\n");
     if (vnThreadsRunning[THREAD_MINER] > 0) printf("ThreadBitcoinMiner still running\n");
@@ -2430,7 +2433,7 @@ bool StopNode()
     if (vnThreadsRunning[THREAD_STAKE_MINER] > 0) printf("ThreadStakeMiner still running\n");
     while (vnThreadsRunning[THREAD_MESSAGEHANDLER] > 0 || vnThreadsRunning[THREAD_RPCHANDLER] > 0)
         MilliSleep(20);
- */
+#endif
     DumpAddresses();
     return true;
 }

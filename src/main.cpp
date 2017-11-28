@@ -114,6 +114,7 @@ extern enum Checkpoints::CPMode CheckpointsMode;
 
 // These functions dispatch to one or all registered wallets
 
+#if 0
 /*
 void RegisterWallet(CWallet* pwalletIn)
 {
@@ -140,7 +141,6 @@ bool static IsFromMe(CTransaction& tx)
     return false;
 }
 
-/*
 // get the wallet transaction with the given hash (if it exists)
 bool static GetTransaction(const uint256& hashTx, CWalletTx& wtx)
 {
@@ -149,7 +149,6 @@ bool static GetTransaction(const uint256& hashTx, CWalletTx& wtx)
             return true;
     return false;
 }
-*
 
 // erases transaction with the given hash from all wallets
 void static EraseFromWallets(uint256 hash)
@@ -157,6 +156,7 @@ void static EraseFromWallets(uint256 hash)
     BOOST_FOREACH(CWallet* pwallet, setpwalletRegistered)
         pwallet->EraseFromWallet(hash);
   */
+#endif
 
 namespace {
 struct CMainSignals {
@@ -175,6 +175,7 @@ struct CMainSignals {
 } g_signals;
 }
 
+#if 0
 /*
 // make sure all wallets know about the given transaction, in the given block
 void SyncWithWallets(const CTransaction& tx, const CBlock* pblock, bool fUpdate, bool fConnect)
@@ -194,6 +195,7 @@ void SyncWithWallets(const CTransaction& tx, const CBlock* pblock, bool fUpdate,
     BOOST_FOREACH(CWallet* pwallet, setpwalletRegistered)
         pwallet->AddToWalletIfInvolvingMe(tx, pblock, fUpdate);
   */
+#endif
 
 void RegisterWallet(CWalletInterface* pwalletIn) {
     g_signals.SyncTransaction.connect(boost::bind(&CWalletInterface::SyncTransaction, pwalletIn, _1, _2, _3));
@@ -204,6 +206,7 @@ void RegisterWallet(CWalletInterface* pwalletIn) {
     g_signals.Broadcast.connect(boost::bind(&CWalletInterface::ResendWalletTransactions, pwalletIn, _1));
 }
 
+#if 0
 /*
 // notify wallets about a new best chain
 void static SetBestChain(const CBlockLocator& loc)
@@ -211,6 +214,7 @@ void static SetBestChain(const CBlockLocator& loc)
     BOOST_FOREACH(CWallet* pwallet, setpwalletRegistered)
         pwallet->SetBestChain(loc);
   */
+#endif
 
 void UnregisterWallet(CWalletInterface* pwalletIn) {
     g_signals.Broadcast.disconnect(boost::bind(&CWalletInterface::ResendWalletTransactions, pwalletIn, _1));
@@ -221,6 +225,7 @@ void UnregisterWallet(CWalletInterface* pwalletIn) {
     g_signals.SyncTransaction.disconnect(boost::bind(&CWalletInterface::SyncTransaction, pwalletIn, _1, _2, _3));
 }
 
+#if 0
 /*
 // notify wallets about an updated transaction
 void static UpdatedTransaction(const uint256& hashTx)
@@ -229,6 +234,7 @@ void static UpdatedTransaction(const uint256& hashTx)
         pwallet->UpdatedTransaction(hashTx);
 }
 */
+#endif
 
 void UnregisterAllWallets() {
     g_signals.Broadcast.disconnect_all_slots();
@@ -246,6 +252,7 @@ void static PrintWallets(const CBlock& block)
         pwallet->PrintWallet(block);
 }
 
+#if 0
 /*
 // notify wallets about an incoming inventory (for request counts)
 void static Inventory(const uint256& hash)
@@ -254,11 +261,13 @@ void static Inventory(const uint256& hash)
         pwallet->Inventory(hash);
 }
 */
+#endif
 
 void SyncWithWallets(const CTransaction &tx, const CBlock *pblock, bool fConnect) {
     g_signals.SyncTransaction(tx, pblock, fConnect);
 }
 
+#if 0
 /*
 // ask wallets to resend their transactions
 void ResendWalletTransactions(bool fForce)
@@ -267,6 +276,7 @@ void ResendWalletTransactions(bool fForce)
         pwallet->ResendWalletTransactions(fForce);
 }
 */
+#endif
 
 void ResendWalletTransactions(bool fForce) {
     g_signals.Broadcast(fForce);
@@ -1759,7 +1769,7 @@ static unsigned int GetNextWorkRequiredV2(const CBlockIndex* pindexLast, bool fP
        // Limit adjustment step
        int64_t nActualTimespan = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
 
-       printf(" nActualTimespan = %d before bounds\n", nActualTimespan);
+       printf(" nActualTimespan = %" PRId64 " before bounds\n", nActualTimespan);
        if (nActualTimespan < nMinActualTimespan)
        nActualTimespan = nMinActualTimespan;
        if (nActualTimespan > nMaxActualTimespan)
