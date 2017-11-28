@@ -160,7 +160,7 @@ void Shutdown()
         exit(0);
 #endif
     }
- /*   else
+    else
     {
         while (!fExit)
             MilliSleep(500);

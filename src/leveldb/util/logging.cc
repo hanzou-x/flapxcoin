@@ -5,6 +5,7 @@
 #include "util/logging.h"
 
 #include <stdint.h>
+#include <inttypes.h>
 #include <errno.h>
 #include <stdarg.h>
 #include <stdio.h>
