@@ -24,6 +24,7 @@
 //   Store per-table metadata (smallest, largest, largest-seq#, ...)
 //   in the table's meta section to speed up ScanTable.
 
+#include <stdint.h>
 #include "db/builder.h"
 #include "db/db_impl.h"
 #include "db/dbformat.h"
@@ -75,7 +76,7 @@ class Repairer {
       status = WriteDescriptor();
     }
     if (status.ok()) {
-      unsigned long long bytes = 0;
+      uint64_t bytes = 0;
       for (size_t i = 0; i < tables_.size(); i++) {
         bytes += tables_[i].meta.file_size;
       }
@@ -152,7 +153,7 @@ class Repairer {
       Status status = ConvertLogToTable(logs_[i]);
       if (!status.ok()) {
         Log(options_.info_log, "Log #%" PRIu64 ": ignoring conversion error: %s",
-            (unsigned long long) logs_[i],
+            (uint64_t) logs_[i],
             status.ToString().c_str());
       }
       ArchiveFile(logname);
@@ -167,7 +168,7 @@ class Repairer {
       virtual void Corruption(size_t bytes, const Status& s) {
         // We print error messages for corruption, but continue repairing.
         Log(info_log, "Log #%" PRIu64 ": dropping %d bytes; %s",
-            (unsigned long long) lognum,
+            (uint64_t) lognum,
             static_cast<int>(bytes),
             s.ToString().c_str());
       }
@@ -212,7 +213,7 @@ class Repairer {
         counter += WriteBatchInternal::Count(&batch);
       } else {
         Log(options_.info_log, "Log #%" PRIu64 ": ignoring %s",
-            (unsigned long long) log,
+            (uint64_t) log,
             status.ToString().c_str());
         status = Status::OK();  // Keep going with rest of file
       }
@@ -234,9 +235,9 @@ class Repairer {
       }
     }
     Log(options_.info_log, "Log #%" PRIu64 ": %d ops saved to Table #%" PRIu64 " %s",
-        (unsigned long long) log,
+        (uint64_t) log,
         counter,
-        (unsigned long long) meta.number,
+        (uint64_t) meta.number,
         status.ToString().c_str());
     return status;
   }
@@ -272,7 +273,7 @@ class Repairer {
       ArchiveFile(TableFileName(dbname_, number));
       ArchiveFile(SSTTableFileName(dbname_, number));
       Log(options_.info_log, "Table #%" PRIu64 ": dropped: %s",
-          (unsigned long long) t.meta.number,
+          (uint64_t) t.meta.number,
           status.ToString().c_str());
       return;
     }
@@ -287,7 +288,7 @@ class Repairer {
       Slice key = iter->key();
       if (!ParseInternalKey(key, &parsed)) {
         Log(options_.info_log, "Table #%" PRIu64 ": unparsable key %s",
-            (unsigned long long) t.meta.number,
+            (uint64_t) t.meta.number,
             EscapeString(key).c_str());
         continue;
       }
@@ -307,7 +308,7 @@ class Repairer {
     }
     delete iter;
     Log(options_.info_log, "Table #%" PRIu64 ": %d entries %s",
-        (unsigned long long) t.meta.number,
+        (uint64_t) t.meta.number,
         counter,
         status.ToString().c_str());
 
@@ -363,7 +364,7 @@ class Repairer {
       s = env_->RenameFile(copy, orig);
       if (s.ok()) {
         Log(options_.info_log, "Table #%" PRIu64 ": %d entries repaired",
-            (unsigned long long) t.meta.number, counter);
+            (uint64_t) t.meta.number, counter);
         tables_.push_back(t);
       }
     }

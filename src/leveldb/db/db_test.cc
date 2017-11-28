@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
+#include <stdint.h>
 #include "leveldb/db.h"
 #include "leveldb/filter_policy.h"
 #include "db/db_impl.h"
@@ -444,7 +445,7 @@ class DBTest {
   void DumpFileCounts(const char* label) {
     fprintf(stderr, "---\n%s:\n", label);
     fprintf(stderr, "maxoverlap: %" PRId64 "\n",
-            static_cast<long long>(
+            static_cast<int64_t>(
                 dbfull()->TEST_MaxNextLevelOverlappingBytes()));
     for (int level = 0; level < config::kNumLevels; level++) {
       int num = NumTableFilesAtLevel(level);
@@ -1049,9 +1050,9 @@ static bool Between(uint64_t val, uint64_t low, uint64_t high) {
   bool result = (val >= low) && (val <= high);
   if (!result) {
     fprintf(stderr, "Value %" PRIu64 " is not in range [%" PRIu64 ", %" PRIu64 "]\n",
-            (unsigned long long)(val),
-            (unsigned long long)(low),
-            (unsigned long long)(high));
+            (uint64_t)(val),
+            (uint64_t)(low),
+            (uint64_t)(high));
   }
   return result;
 }

@@ -3,6 +3,7 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include <stdio.h>
+#include <stdint.h>
 #include "db/dbformat.h"
 #include "port/port.h"
 #include "util/coding.h"
@@ -23,7 +24,7 @@ void AppendInternalKey(std::string* result, const ParsedInternalKey& key) {
 std::string ParsedInternalKey::DebugString() const {
   char buf[50];
   snprintf(buf, sizeof(buf), "' @ %" PRIu64 " : %d",
-           (unsigned long long) sequence,
+           (uint64_t) sequence,
            int(type));
   std::string result = "'";
   result += EscapeString(user_key.ToString());
