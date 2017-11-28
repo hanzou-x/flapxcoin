@@ -262,7 +262,7 @@ void DBImpl::DeleteObsoleteFiles() {
         if (type == kTableFile) {
           table_cache_->Evict(number);
         }
-        Log(options_.info_log, "Delete type=%d #%" PRI64d "\n",
+        Log(options_.info_log, "Delete type=%d #%" PRId64 "\n",
             int(type),
             static_cast<unsigned long long>(number));
         env_->DeleteFile(dbname_ + "/" + filenames[i]);
@@ -398,7 +398,7 @@ Status DBImpl::RecoverLogFile(uint64_t log_number,
   // large sequence numbers).
   log::Reader reader(file, &reporter, true/*checksum*/,
                      0/*initial_offset*/);
-  Log(options_.info_log, "Recovering log #%" PRI64u,
+  Log(options_.info_log, "Recovering log #%" PRIu64,
       (unsigned long long) log_number);
 
   // Read all the records and add to a memtable
@@ -462,7 +462,7 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
   meta.number = versions_->NewFileNumber();
   pending_outputs_.insert(meta.number);
   Iterator* iter = mem->NewIterator();
-  Log(options_.info_log, "Level-0 table #%" PRI64u ": started",
+  Log(options_.info_log, "Level-0 table #%" PRIu64 ": started",
       (unsigned long long) meta.number);
 
   Status s;
@@ -472,7 +472,7 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
     mutex_.Lock();
   }
 
-  Log(options_.info_log, "Level-0 table #%" PRI64u ": %" PRI64d " bytes %s",
+  Log(options_.info_log, "Level-0 table #%" PRIu64 ": %" PRId64 " bytes %s",
       (unsigned long long) meta.number,
       (unsigned long long) meta.file_size,
       s.ToString().c_str());
@@ -695,7 +695,7 @@ void DBImpl::BackgroundCompaction() {
       RecordBackgroundError(status);
     }
     VersionSet::LevelSummaryStorage tmp;
-    Log(options_.info_log, "Moved #%" PRI64d " to level-%d %" PRI64d " bytes %s: %s\n",
+    Log(options_.info_log, "Moved #%" PRId64 " to level-%d %" PRId64 " bytes %s: %s\n",
         static_cast<unsigned long long>(f->number),
         c->level() + 1,
         static_cast<unsigned long long>(f->file_size),
@@ -821,7 +821,7 @@ Status DBImpl::FinishCompactionOutputFile(CompactionState* compact,
     delete iter;
     if (s.ok()) {
       Log(options_.info_log,
-          "Generated table #%" PRI64u ": %" PRI64d " keys, %" PRI64d " bytes",
+          "Generated table #%" PRIu64 ": %" PRId64 " keys, %" PRId64 " bytes",
           (unsigned long long) output_number,
           (unsigned long long) current_entries,
           (unsigned long long) current_bytes);
@@ -833,7 +833,7 @@ Status DBImpl::FinishCompactionOutputFile(CompactionState* compact,
 
 Status DBImpl::InstallCompactionResults(CompactionState* compact) {
   mutex_.AssertHeld();
-  Log(options_.info_log,  "Compacted %d@%d + %d@%d files => %" PRI64d " bytes",
+  Log(options_.info_log,  "Compacted %d@%d + %d@%d files => %" PRId64 " bytes",
       compact->compaction->num_input_files(0),
       compact->compaction->level(),
       compact->compaction->num_input_files(1),

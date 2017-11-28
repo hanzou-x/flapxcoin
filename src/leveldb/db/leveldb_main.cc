@@ -56,7 +56,7 @@ bool PrintLogContents(Env* env, const std::string& fname,
   Slice record;
   std::string scratch;
   while (reader.ReadRecord(&record, &scratch)) {
-    printf("--- offset %" PRI64u "; ",
+    printf("--- offset %" PRIu64 "; ",
            static_cast<unsigned long long>(reader.LastRecordOffset()));
     (*func)(record);
   }
@@ -92,7 +92,7 @@ static void WriteBatchPrinter(Slice record) {
   }
   WriteBatch batch;
   WriteBatchInternal::SetContents(&batch, record);
-  printf("sequence %" PRI64u "\n",
+  printf("sequence %" PRIu64 "\n",
          static_cast<unsigned long long>(WriteBatchInternal::Sequence(&batch)));
   WriteBatchItemPrinter batch_item_printer;
   Status s = batch.Iterate(&batch_item_printer);
