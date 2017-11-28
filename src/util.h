@@ -62,9 +62,9 @@ void LogStackTrace();
 
 
 #if defined(_MSC_VER) || defined(__MSVCRT__)
-#define PRI64d  "I64d"
-#define PRI64u  "I64u"
-#define PRI64x  "I64x"
+  #define PRI64d  "I64d"
+  #define PRI64u  "I64u"
+  #define PRI64x  "I64x"
   #define PRIszx    "Ix"
   #define PRIszu    "Iu"
   #define PRIszd    "Id"
@@ -72,9 +72,9 @@ void LogStackTrace();
   #define PRIpdu    "Iu"
   #define PRIpdd    "Id"
 #else
-#define PRI64d  "lld"
-#define PRI64u  "llu"
-#define PRI64x  "llx"
+  #define PRI64d  "lld"
+  #define PRI64u  "llu"
+  #define PRI64x  "llx"
   #define PRIszx    "zx"
   #define PRIszu    "zu"
   #define PRIszd    "zd"
@@ -241,7 +241,7 @@ void runCommand(std::string strCommand);
 
 inline std::string i64tostr(int64_t n)
 {
-    return strprintf("%"PRI64d, n);
+    return strprintf("%" PRI64d, n);
 }
 
 inline std::string itostr(int n)
