@@ -60,7 +60,7 @@ class PosixLogger : public Logger {
                     t.tm_min,
                     t.tm_sec,
                     static_cast<int>(now_tv.tv_usec),
-                    static_cast<long long unsigned int>(thread_id));
+                    static_cast<uint64_t>(thread_id));
 
       // Print the message
       if (p < limit) {

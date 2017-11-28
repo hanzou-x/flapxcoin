@@ -4,6 +4,7 @@
 
 #include "leveldb/table.h"
 
+#include <stdint.h>
 #include <map>
 #include <string>
 #include "db/dbformat.h"
@@ -788,9 +789,9 @@ static bool Between(uint64_t val, uint64_t low, uint64_t high) {
   bool result = (val >= low) && (val <= high);
   if (!result) {
     fprintf(stderr, "Value %" PRIu64 " is not in range [%" PRIu64 ", %" PRIu64 "]\n",
-            (unsigned long long)(val),
-            (unsigned long long)(low),
-            (unsigned long long)(high));
+            (uint64_t)(val),
+            (uint64_t)(low),
+            (uint64_t)(high));
   }
   return result;
 }
