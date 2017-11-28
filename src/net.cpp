@@ -1270,7 +1270,8 @@ void ThreadSocketHandler()
 // void ThreadMapPort(void* parg)
 void ThreadMapPort()
 {
- /*   IMPLEMENT_RANDOMIZE_STACK(ThreadMapPort(parg));
+#if 0
+    IMPLEMENT_RANDOMIZE_STACK(ThreadMapPort(parg));
 
     // Make this thread recognisable as the UPnP thread
     RenameThread("bitcoin-UPnP");
@@ -1294,7 +1295,7 @@ void ThreadMapPort()
 void ThreadMapPort2(void* parg)
 {
     printf("ThreadMapPort started\n");
- */
+#endif
 
     std::string port = strprintf("%u", GetListenPort());
 
@@ -1306,7 +1307,6 @@ void ThreadMapPort2(void* parg)
 #ifndef UPNPDISCOVER_SUCCESS
     /* miniupnpc 1.5 */
     devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0);
-// #else
 #elif MINIUPNPC_API_VERSION < 14
     /* miniupnpc 1.6 */
     int error = 0;
@@ -1344,11 +1344,11 @@ void ThreadMapPort2(void* parg)
         string strDesc = "NetCoin " + FormatFullVersion();
 #if 0
 #ifndef UPNPDISCOVER_SUCCESS
-        /* miniupnpc 1.5 *
+        /* miniupnpc 1.5 */
         r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
                             port.c_str(), port.c_str(), lanaddr, strDesc.c_str(), "TCP", 0);
 #else
-        /* miniupnpc 1.6 *
+        /* miniupnpc 1.6 */
         r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
                             port.c_str(), port.c_str(), lanaddr, strDesc.c_str(), "TCP", 0, "0");
 #endif

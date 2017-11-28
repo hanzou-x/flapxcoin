@@ -1152,10 +1152,10 @@ int CMerkleTx::GetBlocksToMaturity() const
     return max(0, (nMaturity+20) - GetDepthInMainChain());
 }
 
-/*
+#if 0
 bool CMerkleTx::AcceptToMemoryPool(CTxDB& txdb)
 {
- /*   if (fClient)
+    if (fClient)
     {
         if (!IsInMainChain() && !ClientConnectInputs())
             return false;
@@ -1165,10 +1165,9 @@ bool CMerkleTx::AcceptToMemoryPool(CTxDB& txdb)
     {
         return CTransaction::AcceptToMemoryPool(txdb, fCheckInputs);
     }
- *
     return CTransaction::AcceptToMemoryPool(txdb);
 }
-*/
+#endif
 
 bool CMerkleTx::AcceptToMemoryPool(bool fLimitFree)
 {
