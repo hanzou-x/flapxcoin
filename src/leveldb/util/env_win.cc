@@ -711,7 +711,7 @@ void Win32Logger::Logv( const char* format, va_list ap )
         SYSTEMTIME st;
         GetLocalTime(&st);
         p += snprintf(p, limit - p,
-            "%04d/%02d/%02d-%02d:%02d:%02d.%06d %llx ",
+            "%04d/%02d/%02d-%02d:%02d:%02d.%06d %" PRI64x " ",
             int(st.wYear),
             int(st.wMonth),
             int(st.wDay),

@@ -443,7 +443,7 @@ class DBTest {
 
   void DumpFileCounts(const char* label) {
     fprintf(stderr, "---\n%s:\n", label);
-    fprintf(stderr, "maxoverlap: %lld\n",
+    fprintf(stderr, "maxoverlap: %" PRI64d "\n",
             static_cast<long long>(
                 dbfull()->TEST_MaxNextLevelOverlappingBytes()));
     for (int level = 0; level < config::kNumLevels; level++) {
@@ -1048,7 +1048,7 @@ TEST(DBTest, SparseMerge) {
 static bool Between(uint64_t val, uint64_t low, uint64_t high) {
   bool result = (val >= low) && (val <= high);
   if (!result) {
-    fprintf(stderr, "Value %llu is not in range [%llu, %llu]\n",
+    fprintf(stderr, "Value %" PRI64u " is not in range [%" PRI64u ", %" PRI64u "]\n",
             (unsigned long long)(val),
             (unsigned long long)(low),
             (unsigned long long)(high));
