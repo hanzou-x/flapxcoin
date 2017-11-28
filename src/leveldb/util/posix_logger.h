@@ -8,6 +8,8 @@
 #ifndef STORAGE_LEVELDB_UTIL_POSIX_LOGGER_H_
 #define STORAGE_LEVELDB_UTIL_POSIX_LOGGER_H_
 
+#include <stdint.h>
+#include <inttypes.h>
 #include <algorithm>
 #include <stdio.h>
 #include <sys/time.h>

@@ -114,6 +114,7 @@ void Shutdown()
     // Make this thread recognisable as the shutdown thread
     RenameThread("netcoin-shutoff");
 
+#if 0
  /*   bool fFirstThread = false;
     {
         TRY_LOCK(cs_Shutdown, lockShutdown);
@@ -126,6 +127,8 @@ void Shutdown()
     static bool fExit;
     if (fFirstThread)
  */
+#endif
+
     nTransactionsUpdated++;
     StopRPCThreads();
     ShutdownRPCMining();
@@ -136,6 +139,8 @@ void Shutdown()
         if (pwalletMain)
             pwalletMain->SetBestChain(CBlockLocator(pindexBest));
     }
+
+#if 0
  /*   {
         fShutdown = true;
         nTransactionsUpdated++;
@@ -163,6 +168,7 @@ void Shutdown()
         ExitThread(0);
     }
  */
+#endif
     bitdb.Flush(true);
     boost::filesystem::remove(GetPidFile());
     UnregisterWallet(pwalletMain);
