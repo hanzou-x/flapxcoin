@@ -1895,7 +1895,7 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, const C
     if (!EvalScript(stack, scriptSig, txTo, nIn, flags, nHashType))
         return false;
 
-        stackCopy = stack;
+    stackCopy = stack;
 
     if (!EvalScript(stack, scriptPubKey, txTo, nIn, flags, nHashType))
         return false;

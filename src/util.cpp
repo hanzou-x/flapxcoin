@@ -1333,14 +1333,14 @@ static const long hextable[] =
 
 long hex2long(const char* hexString)
 {
-	long ret = 0; 
+    long ret = 0; 
 
-	while (*hexString && ret >= 0) 
-	{
-		ret = (ret << 4) | hextable[*hexString++];
-	}
+    while (*hexString && ret >= 0) 
+    {
+        ret = (ret << 4) | hextable[(int)*hexString++];
+    }
 
-	return ret; 
+    return ret; 
 }
 
 uint32_t insecure_rand_Rz = 11;

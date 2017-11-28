@@ -832,13 +832,13 @@ Value sendfrom(const Array& params, bool fHelp)
         wtx.mapValue["comment"] = params[4].get_str();
     if (params.size() > 5 && params[5].type() != null_type && !params[5].get_str().empty())
         wtx.mapValue["to"]      = params[5].get_str();
-	std::string txcomment;
+    std::string txcomment;
     if (params.size() > 6 && params[6].type() != null_type && !params[6].get_str().empty())
-	{
+    {
         txcomment = params[6].get_str();
-		if (txcomment.length() > MAX_TX_COMMENT_LEN)
-			txcomment.resize(MAX_TX_COMMENT_LEN);
-	}
+        if (txcomment.length() > MAX_TX_COMMENT_LEN)
+            txcomment.resize(MAX_TX_COMMENT_LEN);
+    }
 
     EnsureWalletIsUnlocked();
 
