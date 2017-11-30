@@ -638,16 +638,19 @@ void BitcoinGUI::setNumBlocks(int count)
         return;
     }
 
-    // QString strStatusBarWarnings = clientModel->getStatusBarWarnings();
-    // bool fShowStatusBar = false;
+#if 0
+    QString strStatusBarWarnings = clientModel->getStatusBarWarnings();
+    bool fShowStatusBar = false;
+#endif
     QString tooltip;
 
- /*   if(count < nTotalBlocks)
+#if 0
+    if(count < nTotalBlocks)
     {
         int nRemainingBlocks = nTotalBlocks - count;
         float nPercentageDone = count / (nTotalBlocks * 0.01f);
 
-      /*  if (strStatusBarWarnings.isEmpty())
+        if (strStatusBarWarnings.isEmpty())
         {
             progressBarLabel->setText(tr("Synchronizing with network..."));
 
@@ -657,7 +660,7 @@ void BitcoinGUI::setNumBlocks(int count)
             progressBar->setValue(count);
             progressBar->setVisible(true);
         }
-    *
+    
         progressBarLabel->setText(tr("Synchronizing with network..."));
         progressBarLabel->setVisible(true);
         progressBar->setFormat(tr("~%n block(s) remaining", "", nRemainingBlocks));
@@ -677,23 +680,26 @@ void BitcoinGUI::setNumBlocks(int count)
         progressBar->setVisible(false);
         tooltip = tr("Downloaded %1 blocks of transaction history.").arg(count);
     }
- */
- /*   // Override progressBarLabel text and hide progress bar, when we have warnings to display
+    // Override progressBarLabel text and hide progress bar, when we have warnings to display
     if (!strStatusBarWarnings.isEmpty())
     {
         progressBarLabel->setText(strStatusBarWarnings);
         progressBarLabel->setVisible(true);
         progressBar->setVisible(false);
     }
-  */
+#endif
+ 
 
     QDateTime lastBlockDate = clientModel->getLastBlockDate();
+#if 0
     // int secs = lastBlockDate.secsTo(QDateTime::currentDateTime());
     // QString text;
+#endif
     QDateTime currentDate = QDateTime::currentDateTime();
     int totalSecs = GetTime() - 1393221600;
     int secs = lastBlockDate.secsTo(currentDate);
- /*
+#if 0
+ 
     // Represent time from last generated block in human readable text
     if(secs <= 0)
     {
@@ -708,8 +714,8 @@ void BitcoinGUI::setNumBlocks(int count)
         text = tr("%n minute(s) ago","",secs/60);
     }
     else if(secs < 24*60*60)
- */
-  /*  if(count < nTotalBlocks)
+ 
+    if(count < nTotalBlocks)
     {
         // text = tr("%n hour(s) ago","",secs/(60*60));
         tooltip = tr("Processed %1 of %2 (estimated) blocks of transaction history.").arg(count).arg(nTotalBlocks);
@@ -720,6 +726,7 @@ void BitcoinGUI::setNumBlocks(int count)
         tooltip = tr("Processed %1 blocks of transaction history.").arg(count);
     }
  */
+#endif
     tooltip = tr("Processed %1 blocks of transaction history.").arg(count);
 
     // Set icon state: spinning if catching up, tick otherwise
