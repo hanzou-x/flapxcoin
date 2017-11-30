@@ -92,13 +92,6 @@ static void InitMessage(const std::string &message)
 }
 
 /*
-static void QueueShutdown()
-{
-    QMetaObject::invokeMethod(QCoreApplication::instance(), "quit", Qt::QueuedConnection);
-}
-*/
-
-/*
    Translate string to current locale using Qt.
  */
 static std::string Translate(const char* psz)
@@ -155,7 +148,6 @@ int main(int argc, char *argv[])
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
     app.setOrganizationName("Netcoin");
-    //XXX app.setOrganizationDomain("");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
         app.setApplicationName("Netcoin-Qt-testnet");
     else
@@ -196,7 +188,6 @@ int main(int argc, char *argv[])
     uiInterface.ThreadSafeAskFee.connect(ThreadSafeAskFee);
     uiInterface.ThreadSafeHandleURI.connect(ThreadSafeHandleURI);
     uiInterface.InitMessage.connect(InitMessage);
-    // uiInterface.QueueShutdown.connect(QueueShutdown);
     uiInterface.Translate.connect(Translate);
 
     // Show help message immediately after parsing command-line options (for "-lang") and setting locale,
@@ -269,7 +260,6 @@ int main(int argc, char *argv[])
                 guiref = 0;
             }
             // Shutdown the core and its threads, but don't exit Bitcoin-Qt here
-            // Shutdown(NULL);
             threadGroup.interrupt_all();
             threadGroup.join_all();
             Shutdown();

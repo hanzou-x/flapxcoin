@@ -1418,7 +1418,6 @@ public:
                     return hash;
             }
         }
-        // return (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet);
         return Params().HashGenesisBlock();
     }
 

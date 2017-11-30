@@ -14,7 +14,6 @@
 #include "walletdb.h"
 #include "bitcoinrpc.h"
 #include "net.h"
-// #include "init.h"
 #include "util.h"
 #include "ui_interface.h"
 #include "checkpoints.h"
@@ -39,7 +38,6 @@ CWallet* pwalletMain;
 CClientUIInterface uiInterface;
 std::string strWalletFileName;
 bool fConfChange;
-// bool fEnforceCanonical;
 unsigned int nNodeLifespan;
 unsigned int nDerivationMethodIndex;
 unsigned int nMinerSleep;
@@ -50,15 +48,6 @@ enum Checkpoints::CPMode CheckpointsMode;
 //
 // Shutdown
 //
-/*
-void ExitTimeout(void* parg)
-{
-#ifdef WIN32
-    MilliSleep(5000);
-    ExitProcess(0);
-#endif
-}
-*/
 //
 // Thread management and startup/shutdown:
 //
@@ -88,15 +77,6 @@ volatile bool fRequestShutdown = false;
 
 void StartShutdown()
 {
-/*
-#ifdef QT_GUI
-    // ensure we leave the Qt main loop for a clean GUI exit (Shutdown() is called in bitcoin.cpp afterwards)
-    uiInterface.QueueShutdown();
-#else
-    // Without UI, Shutdown() can simply be started in a new thread
-    NewThread(Shutdown, NULL);
-#endif
-  */
     fRequestShutdown = true;
 }
 
@@ -108,26 +88,10 @@ bool ShutdownRequested()
 void Shutdown()
 {
     static CCriticalSection cs_Shutdown;
-    // static bool fTaken;
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
     // Make this thread recognisable as the shutdown thread
     RenameThread("netcoin-shutoff");
-
-#if 0
- /*   bool fFirstThread = false;
-    {
-        TRY_LOCK(cs_Shutdown, lockShutdown);
-        if (lockShutdown)
-        {
-            fFirstThread = !fTaken;
-            fTaken = true;
-        }
-    }
-    static bool fExit;
-    if (fFirstThread)
- */
-#endif
 
     nTransactionsUpdated++;
     StopRPCThreads();
@@ -140,35 +104,6 @@ void Shutdown()
             pwalletMain->SetBestChain(CBlockLocator(pindexBest));
     }
 
-#if 0
- /*   {
-        fShutdown = true;
-        nTransactionsUpdated++;
-        StopRPCThreads();
-        bitdb.Flush(false);
-        StopNode();
-        bitdb.Flush(true);
-        boost::filesystem::remove(GetPidFile());
-        UnregisterWallet(pwalletMain);
-        delete pwalletMain;
-        NewThread(ExitTimeout, NULL);
-        MilliSleep(50);
-        printf("Netcoin exited\n\n");
-        // fExit = true;
-#ifndef QT_GUI
-        // ensure non-UI client gets exited here, but let Bitcoin-Qt reach 'return 0;' in bitcoin.cpp
-        exit(0);
-#endif
-    }
-    else
-    {
-        while (!fExit)
-            MilliSleep(500);
-        MilliSleep(100);
-        ExitThread(0);
-    }
- */
-#endif
     bitdb.Flush(true);
     boost::filesystem::remove(GetPidFile());
     UnregisterWallet(pwalletMain);
@@ -179,19 +114,12 @@ void Shutdown()
 // Signal handlers are very limited in what they are allowed to do, so:
 void DetectShutdownThread(boost::thread_group* threadGroup)
 {
-    // bool shutdown = ShutdownRequested();
-    // while (fRequestShutdown == false)
-    // Tell the main threads to shutdown.
     while (!fRequestShutdown)
-    //while (!shutdown)
     {
         MilliSleep(200);
          if (fRequestShutdown)
             threadGroup->interrupt_all();
-        // shutdown = ShutdownRequested();
     }
-    // if (threadGroup)
-    //    threadGroup->interrupt_all();
 }
 
 
@@ -305,14 +233,11 @@ bool AppInit(int argc, char* argv[])
 
     if (detectShutdownThread)
     {
-        // Shutdown(NULL);
-        // threadGroup.interrupt_all();
-        // threadGroup.join_all();
         detectShutdownThread->join();
         delete detectShutdownThread;
         detectShutdownThread = NULL;
     }
-        Shutdown();
+    Shutdown();
 
     return fRet;
 }
@@ -330,7 +255,6 @@ int main(int argc, char* argv[])
     if (fRet && fDaemon)
         return 0;
 
-    // return 1;
     return (fRet ? 0 : 1);
 }
 #endif
@@ -515,8 +439,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     sigaction(SIGHUP, &sa_hup, NULL);
 #endif
 
-    // threadGroup.create_thread(boost::bind(&DetectShutdownThread, &threadGroup));
-
     // ********************************************************* Step 2: parameter interactions
 
     nNodeLifespan = GetArg("-addrlifespan", 7);
@@ -538,17 +460,9 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     nDerivationMethodIndex = 0; // use 0 for compatibility with original netcoin wallet keys
 
-    // fTestNet = GetBoolArg("-testnet");
-
     if (!SelectParamsFromCommandLine()) {
          return InitError("Invalid combination of -testnet and -regtest.");
     }
-
-    // NetCoin: Keep irc seeding on by default for now.
-//    if (fTestNet)
-//    {
-//        SoftSetBoolArg("-irc", true);
-//    }
 
     if (mapArgs.count("-bind")) {
         // when specifying an explicit binding address, you want to listen on it
@@ -596,14 +510,14 @@ bool AppInit2(boost::thread_group& threadGroup)
     else
         fDebugNet = GetBoolArg("-debugnet");
 
-   //  bitdb.SetDetach(GetBoolArg("-detachdb", false));
- /*
+#if 0
 #if !defined(WIN32) && !defined(QT_GUI)
     fDaemon = GetBoolArg("-daemon");
 #else
     fDaemon = false;
 #endif
-*/
+#endif
+
     if (fDaemon)
         fServer = true;
     else
@@ -640,7 +554,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     }
 
     fConfChange = GetBoolArg("-confchange", false);
-    // fEnforceCanonical = GetBoolArg("-enforcecanonical", true);
 
     if (mapArgs.count("-mininput"))
     {
@@ -664,7 +577,8 @@ bool AppInit2(boost::thread_group& threadGroup)
     static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
     if (!lock.try_lock())
         return InitError(strprintf(_("Cannot obtain a lock on data directory %s.  NetCoin is probably already running."), GetDataDir().string().c_str()));
-/*
+
+#if 0
 #if !defined(WIN32) && !defined(QT_GUI)
     if (fDaemon)
     {
@@ -686,7 +600,8 @@ bool AppInit2(boost::thread_group& threadGroup)
             fprintf(stderr, "Error: setsid() returned %d errno %d\n", sid, errno);
     }
 #endif
-*/
+#endif
+
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
@@ -709,12 +624,6 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     if (!bitdb.Open(GetDataDir()))
     {
-        /*  string msg = strprintf(_("Error initializing database environment %s!"
-                                 " To recover, BACKUP THAT DIRECTORY, then remove"
-                                 " everything from it except for wallet.dat."), strDataDir.c_str());
-        return InitError(msg);
-      */
-
         // try moving the database env out of the way
         boost::filesystem::path pathDatabase = GetDataDir() / "database";
         boost::filesystem::path pathDatabaseBak = GetDataDir() / strprintf("database.%" PRId64 ".bak", GetTime());
@@ -779,14 +688,6 @@ bool AppInit2(boost::thread_group& threadGroup)
                 SetLimited(net);
         }
     }
- /*
-#if defined(USE_IPV6)
-#if ! USE_IPV6
-    else
-        SetLimited(NET_IPV6);
-#endif
-#endif
- */
 
     CService addrProxy;
     bool fProxy = false;
@@ -798,10 +699,8 @@ bool AppInit2(boost::thread_group& threadGroup)
         if (!IsLimited(NET_IPV4))
             SetProxy(NET_IPV4, addrProxy, nSocksVersion);
         if (nSocksVersion > 4) {
-// #ifdef USE_IPV6
             if (!IsLimited(NET_IPV6))
                 SetProxy(NET_IPV6, addrProxy, nSocksVersion);
-// #endif
             SetNameProxy(addrProxy, nSocksVersion);
         }
         fProxy = true;
@@ -824,9 +723,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     fNoListen = !GetBoolArg("-listen", true);
     fDiscover = GetBoolArg("-discover", true);
     fNameLookup = GetBoolArg("-dns", true);
-// #ifdef USE_UPNP
-//    fUseUPnP = GetBoolArg("-upnp", USE_UPNP);
-// #endif
 
     bool fBound = false;
     if (!fNoListen)
@@ -842,10 +738,8 @@ bool AppInit2(boost::thread_group& threadGroup)
         } else {
             struct in_addr inaddr_any;
             inaddr_any.s_addr = INADDR_ANY;
-// #ifdef USE_IPV6
             if (!IsLimited(NET_IPV6))
                 fBound |= Bind(CService(in6addr_any, GetListenPort()), false);
-// #endif
             if (!IsLimited(NET_IPV4))
                 fBound |= Bind(CService(inaddr_any, GetListenPort()), !fBound);
         }
@@ -945,16 +839,6 @@ bool AppInit2(boost::thread_group& threadGroup)
         return false;
     }
 
-    // ********************************************************* Testing Zerocoin
-
-/*
-    if (GetBoolArg("-zerotest", false))
-    {
-        printf("\n=== ZeroCoin tests start ===\n");
-        Test_RunAllTests();
-        printf("=== ZeroCoin tests end ===\n\n");
-    }
-*/
     // ********************************************************* Step 8: load wallet
 
     uiInterface.InitMessage(_("Loading wallet..."));
@@ -1126,16 +1010,12 @@ bool AppInit2(boost::thread_group& threadGroup)
     printf("mapWallet.size() = %" PRIszu "\n",       pwalletMain->mapWallet.size());
     printf("mapAddressBook.size() = %" PRIszu "\n",  pwalletMain->mapAddressBook.size());
 
-    // if (!NewThread(StartNode, NULL))
-    // if (!NewThread(StartNode, (void*)&threadGroup))
-    //    InitError(_("Error: could not start node"));
     StartNode(threadGroup);
 
     // InitRPCMining is needed here so getwork/getblocktemplate in the GUI debug console works properly.
     InitRPCMining();
 
     if (fServer)
-        // NewThread(ThreadRPCServer, NULL);
         StartRPCThreads();
 
     // Mine proof-of-stake blocks in the background
@@ -1149,19 +1029,9 @@ bool AppInit2(boost::thread_group& threadGroup)
     uiInterface.InitMessage(_("Done loading"));
     printf("Done loading\n");
 
-    // if (!strErrors.str().empty())
-     //   return InitError(strErrors.str());
-
-     // Add wallet transactions that aren't already in a block to mapTransactions
+    // Add wallet transactions that aren't already in a block to mapTransactions
     pwalletMain->ReacceptWalletTransactions();
-/*
-#if !defined(QT_GUI)
-    // Loop until process is exit()ed from shutdown() function,
-    // called from ThreadRPCServer thread when a "stop" command is received.
-    while (1)
-        MilliSleep(5000);
-#endif
-*/
+
     // Run a thread to flush wallet periodically
     threadGroup.create_thread(boost::bind(&ThreadFlushWalletDB, boost::ref(pwalletMain->strWalletFile)));
 

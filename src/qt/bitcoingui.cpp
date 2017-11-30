@@ -216,7 +216,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addPermanentWidget(frameBlocks);
 
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
-    // this->setStyleSheet("background-color: #ceffee;");
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), this, SLOT(gotoHistoryPage()));
@@ -306,7 +305,6 @@ void BitcoinGUI::createActions()
 
     calcAction = new QAction(QIcon(":/icons/bitcoin"), tr("&PIR Calculator"), this);
     calcAction->setToolTip(tr("Open PIR Calculator"));
-    //calcAction->setMenuRole(QAction::AboutRole);
 
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
@@ -376,8 +374,6 @@ void BitcoinGUI::createActions()
     if (themesList.count()>0)
     {
         QSignalMapper* signalMapper = new QSignalMapper (this) ;
-        //QActionGroup* menuActionGroup = new QActionGroup( this );
-        //menuActionGroup->setExclusive(true);
 
         // Add custom themes (themes directory)
         for( int i=0; i < themesList.count(); i++ )
@@ -386,7 +382,6 @@ void BitcoinGUI::createActions()
             customActions[i] = new QAction(QIcon(":/icons/options"), theme, this);
             customActions[i]->setToolTip(QString("Switch to " + theme + " theme"));
             customActions[i]->setStatusTip(QString("Switch to " + theme + " theme"));
-            //customActions[i]->setActionGroup(menuActionGroup);
             signalMapper->setMapping(customActions[i], theme);
             connect(customActions[i], SIGNAL(triggered()), signalMapper, SLOT (map()));
         }
@@ -419,7 +414,6 @@ void BitcoinGUI::createMenuBar()
 
     settings->addAction(encryptWalletAction);
     settings->addAction(changePassphraseAction);
-    // settings->addAction(unlockWalletAction); //Moved to overviewpage
     settings->addAction(lockWalletAction);
 	settings->addAction(charityAction);
     settings->addSeparator();
@@ -443,9 +437,6 @@ void BitcoinGUI::createMenuBar()
     help->addSeparator();
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
-
-	// QString ss("QMenuBar::item { background-color: #ceffee; color: black }");
-    // appMenuBar->setStyleSheet(ss);
 }
 
 void BitcoinGUI::createToolBars()
@@ -498,9 +489,6 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
         setNumConnections(clientModel->getNumConnections());
         connect(clientModel, SIGNAL(numConnectionsChanged(int)), this, SLOT(setNumConnections(int)));
 
-        // setNumBlocks(clientModel->getNumBlocks(), clientModel->getNumBlocksOfPeers());
-        // connect(clientModel, SIGNAL(numBlocksChanged(int,int)), this, SLOT(setNumBlocks(int,int)));
-
         setNumBlocks(clientModel->getNumBlocks());
         connect(clientModel, SIGNAL(numBlocksChanged(int)), this, SLOT(setNumBlocks(int)));
 
@@ -525,7 +513,6 @@ void BitcoinGUI::setWalletModel(WalletModel *walletModel)
         // Put transaction list in tabs
         transactionView->setModel(walletModel);
 
-        // overviewPage->setModel(walletModel);
         overviewPage->setWalletModel(walletModel);
         addressBookPage->setModel(walletModel->getAddressTableModel());
         receiveCoinsPage->setModel(walletModel->getAddressTableModel());
@@ -638,95 +625,11 @@ void BitcoinGUI::setNumBlocks(int count)
         return;
     }
 
-#if 0
-    QString strStatusBarWarnings = clientModel->getStatusBarWarnings();
-    bool fShowStatusBar = false;
-#endif
     QString tooltip;
-
-#if 0
-    if(count < nTotalBlocks)
-    {
-        int nRemainingBlocks = nTotalBlocks - count;
-        float nPercentageDone = count / (nTotalBlocks * 0.01f);
-
-        if (strStatusBarWarnings.isEmpty())
-        {
-            progressBarLabel->setText(tr("Synchronizing with network..."));
-
-            progressBarLabel->setVisible(true);
-            progressBar->setFormat(tr("~%n block(s) remaining", "", nRemainingBlocks));
-            progressBar->setMaximum(nTotalBlocks);
-            progressBar->setValue(count);
-            progressBar->setVisible(true);
-        }
-    
-        progressBarLabel->setText(tr("Synchronizing with network..."));
-        progressBarLabel->setVisible(true);
-        progressBar->setFormat(tr("~%n block(s) remaining", "", nRemainingBlocks));
-        progressBar->setMaximum(nTotalBlocks);
-        progressBar->setValue(count);
-        progressBar->setVisible(true);
-        // fShowStatusBar = true;
-        tooltip = tr("Downloaded %1 of %2 blocks of transaction history (%3% done).").arg(count).arg(nTotalBlocks).arg(nPercentageDone, 0, 'f', 2);
-
-    }
-    else
-    {
-        // if (strStatusBarWarnings.isEmpty())
-        //    progressBarLabel->setVisible(false);
-        progressBarLabel->setVisible(false);
-
-        progressBar->setVisible(false);
-        tooltip = tr("Downloaded %1 blocks of transaction history.").arg(count);
-    }
-    // Override progressBarLabel text and hide progress bar, when we have warnings to display
-    if (!strStatusBarWarnings.isEmpty())
-    {
-        progressBarLabel->setText(strStatusBarWarnings);
-        progressBarLabel->setVisible(true);
-        progressBar->setVisible(false);
-    }
-#endif
- 
-
     QDateTime lastBlockDate = clientModel->getLastBlockDate();
-#if 0
-    // int secs = lastBlockDate.secsTo(QDateTime::currentDateTime());
-    // QString text;
-#endif
     QDateTime currentDate = QDateTime::currentDateTime();
     int totalSecs = GetTime() - 1393221600;
     int secs = lastBlockDate.secsTo(currentDate);
-#if 0
- 
-    // Represent time from last generated block in human readable text
-    if(secs <= 0)
-    {
-        // Fully up to date. Leave text empty.
-    }
-    else if(secs < 60)
-    {
-        text = tr("%n second(s) ago","",secs);
-    }
-    else if(secs < 60*60)
-    {
-        text = tr("%n minute(s) ago","",secs/60);
-    }
-    else if(secs < 24*60*60)
- 
-    if(count < nTotalBlocks)
-    {
-        // text = tr("%n hour(s) ago","",secs/(60*60));
-        tooltip = tr("Processed %1 of %2 (estimated) blocks of transaction history.").arg(count).arg(nTotalBlocks);
-    }
-    else
-    {
-        // text = tr("%n day(s) ago","",secs/(60*60*24));
-        tooltip = tr("Processed %1 blocks of transaction history.").arg(count);
-    }
- */
-#endif
     tooltip = tr("Processed %1 blocks of transaction history.").arg(count);
 
     // Set icon state: spinning if catching up, tick otherwise
@@ -755,7 +658,6 @@ void BitcoinGUI::setNumBlocks(int count)
         }
         else if(secs < 2*WEEK_IN_SECONDS)
         {
-            // timeBehindText = tr("%n day(s)","",secs/(24*60*60));
             timeBehindText = tr("%n day(s)","",secs/DAY_IN_SECONDS);
         }
         else if(secs < YEAR_IN_SECONDS)
@@ -764,7 +666,6 @@ void BitcoinGUI::setNumBlocks(int count)
         }
         else
         {
-            // timeBehindText = tr("%n week(s)","",secs/(7*24*60*60));
             int years = secs / YEAR_IN_SECONDS;
             int remainder = secs % YEAR_IN_SECONDS;
             timeBehindText = tr("%1 and %2").arg(tr("%n year(s)", "", years)).arg(tr("%n week(s)","", remainder/WEEK_IN_SECONDS));
@@ -776,23 +677,15 @@ void BitcoinGUI::setNumBlocks(int count)
         progressBar->setMaximum(totalSecs);
         progressBar->setValue(totalSecs - secs);
         progressBar->setVisible(true);
-        // fShowStatusBar = true;
 
         tooltip = tr("Catching up...") + QString("<br>") + tooltip;
         labelBlocksIcon->setMovie(syncIconMovie);
-        // syncIconMovie->start();
         if(count != prevBlocks)
             syncIconMovie->start();
-            // syncIconMovie->jumpToNextFrame();
         prevBlocks = count;
 
         overviewPage->showOutOfSyncWarning(true);
-    // }
-
-    // if(!text.isEmpty())
-    // {
         tooltip += QString("<br>");
-        // tooltip += tr("Last received block was generated %1.").arg(text);
         tooltip += tr("Last received block was generated %1 ago.").arg(timeBehindText);
         tooltip += QString("<br>");
         tooltip += tr("Transactions after this will not yet be visible.");
@@ -1160,10 +1053,6 @@ void BitcoinGUI::updateWeight()
 
 void BitcoinGUI::updateStakingIcon()
 {
-    // uint64_t nMinWeight = 0, nMaxWeight = 0, nWeight = 0;
-    // if (nLastCoinStakeSearchInterval && pwalletMain && !IsInitialBlockDownload()) //netcoin GetStakeWeight requires mutex lock on wallet which tends to freeze initial block downloads
-    //    pwalletMain->GetStakeWeight(*pwalletMain, nMinWeight, nMaxWeight, nWeight);
-
     updateWeight();
 
     if (nLastCoinStakeSearchInterval && nWeight)
@@ -1302,17 +1191,6 @@ void BitcoinGUI::loadTheme(QString theme)
             }
 
             qss.close();
-
-            // Apply the result qss file to Qt
-
-            /*if (styleSheet.contains("$", Qt::CaseInsensitive)) {
-                QRegExp rx("(\\$[-\\w]+)");
-                rx.indexIn(styleSheet);
-                QString captured = rx.cap(1);
-                QMessageBox::warning(this, "Theme syntax error", "You have used variable that is not declared " + captured + ". Theme will not be applied.");
-            } else {*/
-                qApp->setStyleSheet(styleSheet);
-            /*}*/
         }
     } else {
         // If not theme name given - clear styles

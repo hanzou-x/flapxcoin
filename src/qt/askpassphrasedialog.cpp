@@ -71,10 +71,6 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
 
 AskPassphraseDialog::~AskPassphraseDialog()
 {
-    // Attempt to overwrite text so that they do not linger around in memory
-    // ui->passEdit1->setText(QString(" ").repeated(ui->passEdit1->text().size()));
-    // ui->passEdit2->setText(QString(" ").repeated(ui->passEdit2->text().size()));
-    // ui->passEdit3->setText(QString(" ").repeated(ui->passEdit3->text().size()));
     secureClearPassFields();
     delete ui;
 }
