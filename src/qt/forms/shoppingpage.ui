@@ -164,7 +164,7 @@
             <x>0</x>
             <y>0</y>
             <width>741</width>
-            <height>496</height>
+            <height>488</height>
            </rect>
           </property>
           <property name="minimumSize">
@@ -395,7 +395,7 @@
                </property>
                <property name="icon">
                 <iconset resource="../bitcoin.qrc">
-                 <normaloff>:/images/res/images/novaex3.png</normaloff>:/images/res/images/novaex3.png</iconset>
+                 <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -445,7 +445,7 @@
                </property>
                <property name="icon">
                 <iconset resource="../bitcoin.qrc">
-                 <normaloff>:/images/res/images/Cryptopia2.png</normaloff>:/images/res/images/Cryptopia2.png</iconset>
+                 <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -520,8 +520,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>725</width>
-            <height>659</height>
+            <width>727</width>
+            <height>663</height>
            </rect>
           </property>
           <property name="autoFillBackground">
@@ -989,7 +989,7 @@
                  </property>
                  <property name="icon">
                   <iconset resource="../bitcoin.qrc">
-                   <normaloff>:/images/res/images/coin2pay.png</normaloff>:/images/res/images/coin2pay.png</iconset>
+                   <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1068,8 +1068,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>737</width>
-            <height>492</height>
+            <width>725</width>
+            <height>627</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1265,7 +1265,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap resource="../bitcoin.qrc">:/images/res/images/Development/design.png</pixmap>
+                       <pixmap resource="../bitcoin.qrc">:/icons/transaction_5</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>false</bool>
@@ -1845,7 +1845,7 @@
             <x>0</x>
             <y>0</y>
             <width>741</width>
-            <height>496</height>
+            <height>488</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1964,7 +1964,7 @@
                  </property>
                  <property name="icon">
                   <iconset resource="../bitcoin.qrc">
-                   <normaloff>:/images/res/images/foundation.png</normaloff>:/images/res/images/foundation.png</iconset>
+                   <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1999,7 +1999,7 @@
                </property>
                <property name="icon">
                 <iconset resource="../bitcoin.qrc">
-                 <normaloff>:/images/res/images/Site.png</normaloff>:/images/res/images/Site.png</iconset>
+                 <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -2019,7 +2019,7 @@
                </property>
                <property name="icon">
                 <iconset resource="../bitcoin.qrc">
-                 <normaloff>:/images/res/images/Forum.png</normaloff>:/images/res/images/Forum.png</iconset>
+                 <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -2121,8 +2121,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>741</width>
-            <height>496</height>
+            <width>727</width>
+            <height>511</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -2863,7 +2863,7 @@
          </property>
          <property name="icon">
           <iconset resource="../bitcoin.qrc">
-           <normaloff>:/images/res/images/mining-dutch.png</normaloff>:/images/res/images/mining-dutch.png</iconset>
+           <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
          </property>
          <property name="iconSize">
           <size>
