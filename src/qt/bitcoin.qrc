@@ -111,6 +111,17 @@
         <file>res/images/novaex3.png</file>
         <file>res/images/mining-dutch.png</file>
         <file>res/images/coin2pay.png</file>
+        <file>res/images/FlapXcoin/Social/Twitter.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/P2.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/P1.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/N1.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/ISS.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/FM.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/FBT.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/FBB.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/FB.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/fb1.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/P3.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>

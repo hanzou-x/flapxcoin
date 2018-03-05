@@ -95,7 +95,7 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>5</number>
      </property>
      <property name="elideMode">
       <enum>Qt::ElideNone</enum>
@@ -161,7 +161,7 @@
             <x>0</x>
             <y>0</y>
             <width>727</width>
-            <height>663</height>
+            <height>620</height>
            </rect>
           </property>
           <property name="autoFillBackground">
@@ -626,7 +626,7 @@
                  </property>
                  <property name="icon">
                   <iconset resource="../bitcoin.qrc">
-                   <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
+                   <normaloff>:/images/res/images/FlapXcoin/FlapX Art/P1.png</normaloff>:/images/res/images/FlapXcoin/FlapX Art/P1.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -958,7 +958,7 @@
                </property>
                <property name="icon">
                 <iconset resource="../bitcoin.qrc">
-                 <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
+                 <normaloff>:/images/res/images/FlapXcoin/FlapX Art/N1.png</normaloff>:/images/res/images/FlapXcoin/FlapX Art/N1.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -1008,7 +1008,7 @@
                </property>
                <property name="icon">
                 <iconset resource="../bitcoin.qrc">
-                 <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
+                 <normaloff>:/images/res/images/FlapXcoin/FlapX Art/ISS.png</normaloff>:/images/res/images/FlapXcoin/FlapX Art/ISS.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -1066,7 +1066,7 @@
             <x>0</x>
             <y>0</y>
             <width>725</width>
-            <height>627</height>
+            <height>667</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1262,7 +1262,7 @@
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap resource="../bitcoin.qrc">:/icons/transaction_5</pixmap>
+                       <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FM.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>false</bool>
@@ -1961,7 +1961,7 @@
                  </property>
                  <property name="icon">
                   <iconset resource="../bitcoin.qrc">
-                   <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
+                   <normaloff>:/images/res/images/FlapXcoin/FlapX Art/FBT.png</normaloff>:/images/res/images/FlapXcoin/FlapX Art/FBT.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1996,7 +1996,7 @@
                </property>
                <property name="icon">
                 <iconset resource="../bitcoin.qrc">
-                 <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
+                 <normaloff>:/images/res/images/FlapXcoin/FlapX Art/fb1.png</normaloff>:/images/res/images/FlapXcoin/FlapX Art/fb1.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -2016,7 +2016,7 @@
                </property>
                <property name="icon">
                 <iconset resource="../bitcoin.qrc">
-                 <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
+                 <normaloff>:/images/res/images/FlapXcoin/FlapX Art/P2.png</normaloff>:/images/res/images/FlapXcoin/FlapX Art/P2.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -2860,7 +2860,7 @@
          </property>
          <property name="icon">
           <iconset resource="../bitcoin.qrc">
-           <normaloff>:/icons/transaction_5</normaloff>:/icons/transaction_5</iconset>
+           <normaloff>:/images/res/images/FlapXcoin/FlapX Art/P1.png</normaloff>:/images/res/images/FlapXcoin/FlapX Art/P1.png</iconset>
          </property>
          <property name="iconSize">
           <size>
