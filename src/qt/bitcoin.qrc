@@ -122,6 +122,7 @@
         <file>res/images/FlapXcoin/FlapX Art/FB.png</file>
         <file>res/images/FlapXcoin/FlapX Art/fb1.png</file>
         <file>res/images/FlapXcoin/FlapX Art/P3.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/space.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
