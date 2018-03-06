@@ -5075,6 +5075,50 @@
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
+           <widget class="QLabel" name="label_17">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>10</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FBT.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_18">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>70</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
           </widget>
          </item>
          <item row="1" column="0" colspan="2">
@@ -5085,6 +5129,94 @@
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>76</x>
+              <y>20</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FBB.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_10">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>0</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/P1.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_11">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>40</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_15">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>30</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -6045,6 +6177,72 @@
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
+           <widget class="QLabel" name="label_19">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>20</y>
+              <width>81</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/N1.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_20">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>40</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_21">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>10</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/P3.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -6078,6 +6276,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>
