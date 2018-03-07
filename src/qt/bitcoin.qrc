@@ -127,6 +127,13 @@
         <file>res/images/FlapXcoin/Community/STC.png</file>
         <file>res/images/FlapXcoin/Community/WW.png</file>
         <file>res/images/FlapXcoin/Community/NET.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/N2.png</file>
+        <file>res/images/FlapXcoin/Community/GSave.png</file>
+        <file>res/images/FlapXcoin/Community/Elite.png</file>
+        <file>res/images/FlapXcoin/Community/Xcoin.png</file>
+        <file>res/images/FlapXcoin/Community/SAT2.png</file>
+        <file>res/images/FlapXcoin/Community/HYP.png</file>
+        <file>res/images/FlapXcoin/Social/Cc.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
