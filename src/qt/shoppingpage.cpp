@@ -457,11 +457,26 @@ void ShoppingPage::on_pushButton_37_clicked()
 }
 
 
-//Shopping Links
+//Community
 
 void ShoppingPage::on_pushButton_4_clicked()
 {
     QString link="https://cointopay.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_7_clicked()
+{
+    QString link="https://solar2crypto.vmpr.nl/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_14_clicked()
+{
+    QString link="http://wayawolfcoin.org/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_15_clicked()
+{
+    QString link="https://discordapp.com/invite/X43Z7qR";
     QDesktopServices::openUrl(QUrl(link));
 }
 
@@ -483,6 +498,12 @@ void ShoppingPage::on_pushButton_10_clicked()
     QString link="http://netcoin.io/";
     QDesktopServices::openUrl(QUrl(link));
 }
+void ShoppingPage::on_pushButton_11_clicked()
+{
+    QString link="https://discord.gg/WgtVXNH";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
 
 //Development Site links
 void ShoppingPage::on_pushButton_clicked()
