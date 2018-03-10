@@ -45,6 +45,7 @@
         <file alias="overview">res/icons/overview.png</file>
         <file>res/icons/services.png</file>
         <file>res/icons/stakingTab.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/Links.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
@@ -72,6 +73,15 @@
         <file>res/images/FlapXcoin/Community/SAT2.png</file>
         <file>res/images/FlapXcoin/Community/HYP.png</file>
         <file>res/images/FlapXcoin/Social/Cc.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/Pipe.png</file>
+        <file>res/images/FlapXcoin/Social/Panic.png</file>
+        <file>res/images/FlapXcoin/Social/btct.png</file>
+        <file>res/images/FlapXcoin/Community/RBL.png</file>
+        <file>res/images/FlapXcoin/Development/Jio.png</file>
+        <file>res/images/FlapXcoin/Development/P4C.png</file>
+        <file>res/images/FlapXcoin/Community/FlapX.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/P4CFlapx.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/space2.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>

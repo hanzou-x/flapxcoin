@@ -443,10 +443,10 @@ void ShoppingPage::setModel(ClientModel *model)
     this->model = model;
 }
 
-//Exchange Links
-void ShoppingPage::on_pushButton_36_clicked()
+//FlapXcoin
+void ShoppingPage::on_pushButton_110_clicked()
 {
-    QString link="https://novaexchange.com/market/BTC_NET/";
+    QString link="https://sites.google.com/view/flapxcoin/home";
     QDesktopServices::openUrl(QUrl(link));
 }
 
