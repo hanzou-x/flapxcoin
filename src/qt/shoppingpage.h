@@ -75,15 +75,12 @@ private:
     QSortFilterProxyModel *proxyModel;
     QMenu *contextMenu;
 
+//Button Layout: Buttons Mapped to frames ie pushButton_211 = Frame 21 Button 1
 private slots:
 
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
-
-    void on_pushButton_4_clicked();
-
-    void on_pushButton_7_clicked();
 
     void on_pushButton_8_clicked();
 
@@ -93,13 +90,71 @@ private slots:
 
     void on_pushButton_11_clicked();
 
-    void on_pushButton_14_clicked();
-
-    void on_pushButton_15_clicked();
-
     void on_pushButton_37_clicked();
 
     void on_pushButton_110_clicked();
+
+    void on_pushButton_201_clicked();
+
+    void on_pushButton_202_clicked();
+
+    void on_pushButton_203_clicked();
+
+    void on_pushButton_211_clicked();
+
+    void on_pushButton_212_clicked();
+
+    void on_pushButton_213_clicked();
+
+    void on_pushButton_221_clicked();
+
+    void on_pushButton_222_clicked();
+
+    void on_pushButton_223_clicked();
+
+    void on_pushButton_231_clicked();
+
+    void on_pushButton_232_clicked();
+
+    void on_pushButton_233_clicked();
+
+    void on_pushButton_241_clicked();
+
+    void on_pushButton_242_clicked();
+
+    void on_pushButton_243_clicked();
+
+    void on_pushButton_251_clicked();
+
+    void on_pushButton_252_clicked();
+
+    void on_pushButton_253_clicked();
+
+    void on_pushButton_261_clicked();
+
+    void on_pushButton_262_clicked();
+
+    void on_pushButton_263_clicked();
+
+    void on_pushButton_271_clicked();
+
+    void on_pushButton_272_clicked();
+
+    void on_pushButton_273_clicked();
+
+    void on_pushButton_281_clicked();
+
+    void on_pushButton_282_clicked();
+
+    void on_pushButton_283_clicked();
+
+    void on_pushButton_291_clicked();
+
+    void on_pushButton_292_clicked();
+
+    void on_pushButton_293_clicked();
+
+
 
 signals:
 

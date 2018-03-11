@@ -82,6 +82,9 @@
         <file>res/images/FlapXcoin/Community/FlapX.png</file>
         <file>res/images/FlapXcoin/FlapXCoin/P4CFlapx.png</file>
         <file>res/images/FlapXcoin/FlapX Art/space2.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/DrNET.png</file>
+        <file>res/images/FlapXcoin/Social/ML.png</file>
+        <file>res/images/FlapXcoin/Development/Tipbot.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
@@ -182,6 +185,7 @@
         <file>res/tooltips/coinserverexpTooltip.png</file>
         <file>res/tooltips/infositeTooltip.png</file>
         <file>res/tooltips/foundationsiteTooltip.png</file>
+        <file>res/tooltips/Casino.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>
