@@ -80,11 +80,24 @@
         <file>res/images/FlapXcoin/Development/Jio.png</file>
         <file>res/images/FlapXcoin/Development/P4C.png</file>
         <file>res/images/FlapXcoin/Community/FlapX.png</file>
-        <file>res/images/FlapXcoin/FlapXCoin/P4CFlapx.png</file>
         <file>res/images/FlapXcoin/FlapX Art/space2.png</file>
         <file>res/images/FlapXcoin/FlapX Art/DrNET.png</file>
         <file>res/images/FlapXcoin/Social/ML.png</file>
         <file>res/images/FlapXcoin/Development/Tipbot.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/Explorer.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/Pool.png</file>
+        <file>res/images/FlapXcoin/Community/GDC.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/Logo.png</file>
+        <file>res/images/FlapXcoin/Development/CB.png</file>
+        <file>res/images/FlapXcoin/Development/SAT3.png</file>
+        <file>res/images/FlapXcoin/Development/STC.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/Crawlie.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/Home.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/jio.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/Links.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/PFC.png</file>
+        <file>res/images/FlapXcoin/FlapXCoin/Tipbot.png</file>
+        <file>res/images/FlapXcoin/Social/Discord2.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
