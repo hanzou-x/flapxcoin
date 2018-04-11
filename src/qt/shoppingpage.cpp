@@ -444,15 +444,69 @@ void ShoppingPage::setModel(ClientModel *model)
 }
 
 //FlapXcoin
-void ShoppingPage::on_pushButton_110_clicked()
+void ShoppingPage::on_pushButton_111_clicked()
 {
-    QString link="https://sites.google.com/view/flapxcoin/panic";
+    QString link="https://sites.google.com/view/flapxcoin/landing-pad";
     QDesktopServices::openUrl(QUrl(link));
 }
-
-void ShoppingPage::on_pushButton_37_clicked()
+void ShoppingPage::on_pushButton_112_clicked()
 {
-    QString link="https://www.cryptopia.co.nz/Exchange/?market=NET_BTC";
+    QString link="https://sites.google.com/view/flapxcoin/explorers";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_113_clicked()
+{
+    QString link="https://sites.google.com/view/flapxcoin/pools";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_121_clicked()
+{
+    QString link="https://vote.jalapen.io";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_122_clicked()
+{
+    QString link="https://sites.google.com/view/flapxcoin/bots/crawlie";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_123_clicked()
+{
+    QString link="https://sites.google.com/view/flapxcoin/bots/tipbot";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_124_clicked()
+{
+    QString link="https://playforcrypto.com/index.php?action=register&referrer=ukmayhem";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_131_clicked()
+{
+    QString link="https://www.crypto-city.com/index.php/flapx/wall";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_132_clicked()
+{
+    QString link="https://discord.gg/Hfx6Raz";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_133_clicked()
+{
+    QString link="https://twitter.com/FlappyNewsWing";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_134_clicked()
+{
+    QString link="https://bitcointalk.to/index.php?topic=3031911.0";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_135_clicked()
+{
+    QString link="https://play.google.com/store/apps/developer?id=ukmayhem/solartocrypto";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_136_clicked()
+{
+    QString link="https://sites.google.com/view/flapxcoin/dont-panic";
     QDesktopServices::openUrl(QUrl(link));
 }
 

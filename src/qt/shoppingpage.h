@@ -90,9 +90,31 @@ private slots:
 
     void on_pushButton_11_clicked();
 
-    void on_pushButton_37_clicked();
+    void on_pushButton_111_clicked();
 
-    void on_pushButton_110_clicked();
+    void on_pushButton_112_clicked();
+
+    void on_pushButton_113_clicked();
+
+    void on_pushButton_121_clicked();
+
+    void on_pushButton_122_clicked();
+
+    void on_pushButton_123_clicked();
+
+    void on_pushButton_124_clicked();
+
+    void on_pushButton_131_clicked();
+
+    void on_pushButton_132_clicked();
+
+    void on_pushButton_133_clicked();
+
+    void on_pushButton_134_clicked();
+
+    void on_pushButton_135_clicked();
+
+    void on_pushButton_136_clicked();
 
     void on_pushButton_201_clicked();
 
