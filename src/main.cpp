@@ -53,7 +53,7 @@ static const int64_t nTargetTimespan = 60 * 60;	// NetCoin: every 60 minutes
 unsigned int nTargetSpacing = 1 * 60; // NetCoin: 60 sec
 unsigned int nStakeTargetSpacing = 2 * 60; // NetCoin: 60 sec
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;	// 60 blocks
-unsigned int nStakeMinAge = 1 * 60 * 60; // 1 hour
+unsigned int nStakeMinAge = 42 * 60 * 60; // 4 hour
 unsigned int nStakeMaxAge = 2592000; // 30 days
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
@@ -1097,53 +1097,14 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees, uint256 prevHash)
 {
     int64_t nSubsidy;
 
-    // Pre v2.4.1 reward
-    if ( nHeight < 1296010 )
-    {
-        // normal payout
-        nSubsidy = 1024 * COIN;
-
-        std::string cseed_str = prevHash.ToString().substr(5,7);
-        const char* cseed = cseed_str.c_str();
-        long seed = hex2long(cseed);
-        int rand = generateMTRandom(seed, 6000);
-
-        if(rand > 2000 && rand < 2101)
-        {
-            nSubsidy *= 8;
-        }
-
-        // 1st week bonus
-        if(nHeight < 2881)		// 1st 2 days
-        {
-            nSubsidy *= 5;
-        }
-        else if(nHeight < 5761)	// next 2 days
-        {
-            nSubsidy *= 3;
-        }
-        else if(nHeight < 10081)	// next 3 days
-        {
-            nSubsidy *= 2;
-        }
-
-        // Subsidy is cut in half every 129,600 blocks, which will occur approximately every 3 months
-        nSubsidy >>= (nHeight / 129600);
-
-        if (nHeight >= BLOCK_HEIGHT_DIGISHIELD_FIX_START)
-        {
-            nSubsidy += nSubsidy / 4;  //25% boost to all POW miners to encourage new wallet adoption
-        }
-        if (nHeight >= BLOCK_HEIGHT_POS_AND_DIGISHIELD_START)
-        {
-            nSubsidy += nSubsidy / 4;  //25% boost to all POW miners to encourage new wallet adoption
-            nSubsidy *= 2;             //adjust for POW blocks target changing from 1 to 2 minutes when POW/POS goes live
-        }
-
-    }
-    else
-    {
-        nSubsidy = 15 * COIN; // 15 NET static reward and no more superblocks after block 1296000
+    if ( nHeight == 1 ) {
+	nSubsidy = PREMINE;
+    } else if ( nHeight < PIR_PHASEBLOCKS ) {
+	nSubsidy = 15 * COIN;
+    } else if ( nHeight < 2 * PIR_PHASEBLOCKS ) {
+	nSubsidy = 13 * COIN;
+    } else {
+	nSubsidy = 11 * COIN;
     }
 
     return nSubsidy + nFees;
