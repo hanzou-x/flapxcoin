@@ -76,9 +76,9 @@ static const int64_t PIR_THRESHOLDS[PIR_LEVELS] = {
 }; // unit is netcoins.  Must start with 0
 
 static const int64_t PIR_RATES[PIR_PHASES][PIR_LEVELS] = {
-        {10,15,20,30,80,100},   // Year 1
-        {20,25,30,35,40,45 },   // Year 2
-        {2,4,6,7,8,10 }    // Year 3+
+        {17,15,13,10,13,15},   // Year 1
+        {15,13,11,9,11,13},    // Year 2
+        {13,11,9,7,9,11}       // Year 3+
 };
 
 
