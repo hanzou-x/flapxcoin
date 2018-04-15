@@ -368,7 +368,7 @@ static MapCheckpoints mapCheckpoints =
     }
 }
 
-// netcoin: sync-checkpoint master key
+// flapx: sync-checkpoint master key
 const std::string CSyncCheckpoint::strMasterPubKey = "046b2e58c8c0502bea592b7ec55f5acb8781a2764520f346642a5c2a6e8ef8b00704752e825d9e739daac343fae5027945e018a15e456e98ef2d0b507fbd9a6d13";
 
 std::string CSyncCheckpoint::strMasterPrivKey = "";

@@ -534,7 +534,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("netcoin-miner");
+    RenameThread("flapx-miner");
 
     CReserveKey reservekey(pwallet);
 
@@ -573,7 +573,7 @@ void ThreadStakeMiner(CWallet *pwallet)
             }
         }
 
-        //netcoin - Wait until POS activation block height is reached
+        // flapx - Wait until POS activation block height is reached
         if (nBestHeight < (!TestNet() ? BLOCK_HEIGHT_POS_AND_DIGISHIELD_START : BLOCK_HEIGHT_POS_AND_DIGISHIELD_START_TESTNET))
         {
             MilliSleep(60000);

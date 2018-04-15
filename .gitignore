@@ -3,7 +3,7 @@ debug/
 release/
 *.o
 *.exe
-object_script.netcoin-qt.*
+object_script.flapx-qt.*
 #################
 ## Eclipse
 #################
@@ -219,4 +219,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-netcoind
+flapxd
+flapx-qt

@@ -627,7 +627,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("netcoin-wallet");
+    RenameThread("flapx-wallet");
 
     // const string& strFile = ((const string*)parg)[0];
     static bool fOneThread;

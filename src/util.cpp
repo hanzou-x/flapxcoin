@@ -976,7 +976,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "netcoin";
+    const char* pszModule = "flapx";
 #endif
     if (pex)
         return strprintf(
@@ -1015,7 +1015,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\NetCoin
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\NetCoin
     // Mac: ~/Library/Application Support/NetCoin
-    // Unix: ~/.netcoin
+    // Unix: ~/.flapx
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "NetCoin";
@@ -1033,7 +1033,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "NetCoin";
 #else
     // Unix
-    return pathRet / ".netcoin";
+    return pathRet / ".flapx";
 #endif
 #endif
 }
@@ -1078,7 +1078,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "netcoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "flapx.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1122,7 +1122,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override netcoin.conf
+        // Don't overwrite existing settings so command line settings override flapx.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
@@ -1136,7 +1136,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "netcoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "flapxd.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

@@ -540,7 +540,7 @@ void ShoppingPage::on_pushButton_145_clicked()
 //communities
 void ShoppingPage::on_pushButton_201_clicked()
 {
-    QString link="http://netcoin.io/";
+    QString link="http://flapx.io/";
     QDesktopServices::openUrl(QUrl(link));
 }
 void ShoppingPage::on_pushButton_202_clicked()
@@ -550,7 +550,7 @@ void ShoppingPage::on_pushButton_202_clicked()
 }
 void ShoppingPage::on_pushButton_203_clicked()
 {
-    QString link="https://www.crypto-city.com/index.php/net-netcoin/";
+    QString link="https://www.crypto-city.com/index.php/net-flapx/";
     QDesktopServices::openUrl(QUrl(link));
 }
 //FLAPX

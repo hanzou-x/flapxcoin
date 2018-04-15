@@ -48,7 +48,7 @@ libzerocoin::Params* ZCParams;
 
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
-// initial netcoin difficulty params - preKGW then digishield
+// initial flapx difficulty params - preKGW then digishield
 static const int64_t nTargetTimespan = 60 * 60; // NetCoin: every 60 minutes
 unsigned int nTargetSpacing = 1 * 60; // NetCoin: 60 sec
 unsigned int nStakeTargetSpacing = 2 * 60; // NetCoin: 60 sec
@@ -600,7 +600,7 @@ bool CTransaction::CheckTransaction() const
     return true;
 }
 
-//netcoin Version 1 and 2 (pre POS)
+//flapx Version 1 and 2 (pre POS)
 int64_t CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree, enum GetMinFee_mode mode) const
 {
         unsigned int nBytes = ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION);
@@ -1386,7 +1386,7 @@ unsigned int GetNextTrust_DigiShield(const CBlockIndex* pindexLast, bool fProofO
 
     // thanks to RealSolid & WDC for this code
 
-    // netcoin POW and POS blocks each separately retarget to 2 minutes,
+    // flapx POW and POS blocks each separately retarget to 2 minutes,
     // giving 1 minute overall average block target time.
     int64_t retargetTimespan = nTargetSpacing * 2;
 
@@ -1448,7 +1448,7 @@ static unsigned int GetNextWorkRequiredV2(const CBlockIndex* pindexLast, bool fP
     // Limit adjustment step
     int64_t nActualTimespan = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
 
-    // netcoin POW and POS blocks each separately retarget to 2 minutes,
+    // flapx POW and POS blocks each separately retarget to 2 minutes,
     // giving 1 minute overall average block target time.
     int64_t retargetTimespan = nTargetSpacing;
 
@@ -1492,7 +1492,7 @@ unsigned int GetNextProofOfWork(const CBlockIndex* pindexLast, const CBlock* pbl
     if (pindexLastPOW->nHeight+1 >= (TestNet() ? BLOCK_HEIGHT_KGW_START_TESTNET : BLOCK_HEIGHT_KGW_START))
         return GetNextWorkRequired_KGW(pindexLastPOW);
 
-    // first netcoin difficulty algorithm
+    // first flapx difficulty algorithm
     return GetNextWorkRequired_V1(pindexLastPOW,pblock);
 }
 
@@ -1763,7 +1763,7 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs, map<uint256, CTx
 {
     // Take over previous transactions' spent pointers
     // fBlock is true when this is called from AcceptBlock when a new best-block is added to the blockchain
-    // fMiner is true when called from the internal netcoin miner
+    // fMiner is true when called from the internal flapx miner
     // ... both are false when called from CTransaction::AcceptToMemoryPool
     if (!IsCoinBase())
     {
@@ -2290,7 +2290,7 @@ bool CBlock::SetBestChain(CTxDB& txdb, CBlockIndex* pindexNew)
     return true;
 }
 
-//netcoin - fresh coins age faster than older coins
+// flapx - fresh coins age faster than older coins
 // madprofezzor@gmail.com (who)
 // this should encourage and reward users who attempt to maintain full nodes
 // and increase the overall network security

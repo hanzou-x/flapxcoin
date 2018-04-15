@@ -74,7 +74,7 @@ static const int64_t PIR_THRESHOLDS[PIR_LEVELS] = {
     100000,
     1000000,
     10000000
-}; // unit is netcoins.  Must start with 0
+}; // unit is flapxs.  Must start with 0
 
 static const int64_t PIR_RATES[PIR_PHASES][PIR_LEVELS] = {
         {17,15,13,10,13,15},   // Year 1
@@ -87,7 +87,7 @@ inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MO
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 
 
-// netcoin Coin Age uses a diminishing returns rule to encourage and reward frequent staking attempts
+// flapx Coin Age uses a diminishing returns rule to encourage and reward frequent staking attempts
 static const int COINAGE_TIME_DILATION_HALFLIFE_DAYS = 90;
 static const int COINAGE_FULL_REWARD_DAYS = 30;
 
@@ -414,7 +414,7 @@ public:
     {
         // Large (in bytes) low-priority (new, small-coin) transactions
         // need a fee.
-        return dPriority > COIN * 1440 / 250; // NetCoin: 1440 blocks found a day. Priority cutoff is 1 netcoin day / 250 bytes.
+        return dPriority > COIN * 1440 / 250; // NetCoin: 1440 blocks found a day. Priority cutoff is 1 flapx day / 250 bytes.
     }
 
     // Netcoin nVersion=1 and 2

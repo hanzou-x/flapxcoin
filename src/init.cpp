@@ -91,7 +91,7 @@ void Shutdown()
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
     // Make this thread recognisable as the shutdown thread
-    RenameThread("netcoin-shutoff");
+    RenameThread("flapx-shutoff");
 
     nTransactionsUpdated++;
     StopRPCThreads();
@@ -164,13 +164,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to netcoind / RPC client
+            // First part of help message is specific to flapxd / RPC client
             std::string strUsage = _("NetCoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  netcoind [options]                     " + "\n" +
-                  "  netcoind [options] <command> [params]  " + _("Send command to -server or netcoind") + "\n" +
-                  "  netcoind [options] help                " + _("List commands") + "\n" +
-                  "  netcoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  flapxd [options]                     " + "\n" +
+                  "  flapxd [options] <command> [params]  " + _("Send command to -server or flapxd") + "\n" +
+                  "  flapxd [options] help                " + _("List commands") + "\n" +
+                  "  flapxd [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -180,7 +180,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "netcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "flapx:"))
                 fCommandLine = true;
 
         if (fCommandLine)
@@ -247,7 +247,7 @@ int main(int argc, char* argv[])
 {
     bool fRet = false;
 
-    // Connect netcoind signal handlers
+    // Connect flapxd signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);
@@ -290,8 +290,8 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
-        "  -conf=<file>           " + _("Specify configuration file (default: netcoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: netcoind.pid)") + "\n" +
+        "  -conf=<file>           " + _("Specify configuration file (default: flapx.conf)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: flapxd.pid)") + "\n" +
         "  -gen                   " + _("Generate coins") + "\n" +
         "  -gen=0                 " + _("Don't generate coins") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
@@ -384,7 +384,7 @@ std::string HelpMessage()
     return strUsage;
 }
 
-/** Initialize netcoin.
+/** Initialize flapx.
  *  @pre Parameters should be parsed and config file should be read.
  */
 bool AppInit2(boost::thread_group& threadGroup)
@@ -458,7 +458,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     if(strCpMode == "permissive")
         CheckpointsMode = Checkpoints::PERMISSIVE;
 
-    nDerivationMethodIndex = 0; // use 0 for compatibility with original netcoin wallet keys
+    nDerivationMethodIndex = 0; // use 0 for compatibility with original flapx wallet keys
 
     if (!SelectParamsFromCommandLine()) {
          return InitError("Invalid combination of -testnet and -regtest.");
@@ -801,7 +801,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
 
     // as LoadBlockIndex can take several minutes, it's possible the user
-    // requested to kill netcoin-qt during the last operation. If so, exit.
+    // requested to kill flapx-qt during the last operation. If so, exit.
     // As the program has not fully started yet, Shutdown() is possibly overkill.
     if (fRequestShutdown)
     {
