@@ -81,7 +81,8 @@ public:
         assert(hashGenesisBlock == uint256("0xf30d6d37c276519974c14eae52dac5538b2bdc358f2e4a3b48a14b201eb48fed"));
         assert(genesis.hashMerkleRoot == uint256("0x9e17be6aefbffc74cf4deab73f93bd050e696008fe28c56de80520a22b05fafb"));
 
-        vSeeds.push_back(CDNSSeedData("presstab.pw", "netseed.presstab.pw"));
+        vSeeds.push_back(CDNSSeedData("seed", "seed.flapx.mycryptocoins.net"));
+        vSeeds.push_back(CDNSSeedData("seednodes", "seednodes.flapx.mycryptocoins.net"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75); //X
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 80); //Z
