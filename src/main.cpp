@@ -1110,7 +1110,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees, uint256 prevHash)
     return nSubsidy + nFees;
 }
 
-// Netcoin: PERSONALISED INTEREST RATE CALCULATION
+// FlapX: PERSONALISED INTEREST RATE CALCULATION
 // madprofezzor@gmail.com
 
 // returns an integer between 0 and PIR_PHASES-1 representing which PIR phase the supplied block height falls into
@@ -1363,7 +1363,7 @@ unsigned int static GetNextWorkRequired_KGW(const CBlockIndex* pindexLast)
 
 
 
-// Netcoin: Digishield inspired difficulty algorithm
+// FlapX: Digishield inspired difficulty algorithm
 //  Digibyte code was simplified and reduced by assuming nInterval==1
 //  added fProofOfStake to selectively locate last two blocks of the requested type for the time comparison.
 // includes extra flag to backtrack either Proof of Stake or Proof of Work blocks in the chain
@@ -3435,7 +3435,7 @@ bool IsValidPeerVersion(int nVersion, string strSubVer)
         return false;
     }
 
-    if (strSubVer.find("Netcoin Stake:2") != std::string::npos) return true;
+    if (strSubVer.find("FlapX Stake:2") != std::string::npos) return true;
 
     return false;
 

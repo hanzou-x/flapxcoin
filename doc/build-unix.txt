@@ -27,7 +27,7 @@ Dependencies
  libqrencode   QRCode generation  QRCode generation (only needed when GUI enabled)
 
 miniupnpc may be used for UPnP port mapping.  It can be downloaded from
-http://miniupnp.tuxfamily.org/files/.  As default Netcoin has UPnP support. Set USE_UPNP to a different value to control this:
+http://miniupnp.tuxfamily.org/files/.  As default FlapX has UPnP support. Set USE_UPNP to a different value to control this:
  USE_UPNP=-    No UPnP support - miniupnp not required
  USE_UPNP=0    (the default) UPnP support turned off by default at runtime
  USE_UPNP=1    UPnP support turned on by default at runtime
@@ -38,7 +38,7 @@ your package manager. Set USE_QRCODE to control this:
  USE_QRCODE=0   (the default) No QRCode support - libqrcode not required
  USE_QRCODE=1   QRCode support enabled
 
-See readme-qt.rst for other instructions on building Netcoin-Qt, the graphical user interface.
+See readme-qt.rst for other instructions on building flapx-qt, the graphical user interface.
 
 Licenses of statically linked libraries:
  Berkeley DB    New BSD license with additional requirement that linked software must be free open source
@@ -67,18 +67,18 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev
 #For UPnP support
 sudo apt-get install libminiupnpc-dev
 
-# For building Netcoin-Qt 
+# For building flapx-qt
 sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools qt5-default libprotobuf-dev protobuf-compiler libqrencode-dev
 
 To Build
 --------
 
-# Headless Netcoin (flapxd)
+# Headless FlapX (flapxd)
 cd to build folder /src/
 make -f makefile.unix 
 strip flapxd         
 
-#Netcoin-Qt (GUI  #optional required)
+# flapx-qt (GUI  #optional required)
 cd to build folder
 qmake "USE_QRCODE=1"
 make
@@ -122,7 +122,7 @@ sudo su
 
 Security
 --------
-To help make your Netcoin installation more secure by making certain attacks impossible to
+To help make your FlapX installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable

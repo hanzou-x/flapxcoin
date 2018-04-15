@@ -45,9 +45,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Netcoins");
-    case mBTC: return QString("Milli-Netcoins (1 / 1,000)");
-    case uBTC: return QString("Nano-Netcoins (1 / 1,000,000)");
+    case BTC: return QString("FlapX");
+    case mBTC: return QString("Milli-FlapX (1 / 1,000)");
+    case uBTC: return QString("Micro-FlapX (1 / 1,000,000)");
     default: return QString("???");
     }
 }

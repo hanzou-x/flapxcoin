@@ -117,10 +117,10 @@ Value getworkex(const Array& params, bool fHelp)
         );
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "Netcoin is not connected!");
+        throw JSONRPCError(-9, "FlapX is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "Netcoin is downloading blocks...");
+        throw JSONRPCError(-10, "FlapX is downloading blocks...");
 
     if (pindexBest->nHeight >= (!TestNet() ? BLOCK_HEIGHT_FINALPOW : BLOCK_HEIGHT_FINALPOW_TESTNET))
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
@@ -253,10 +253,10 @@ Value getwork(const Array& params, bool fHelp)
             "If [data] is specified, tries to solve the block and returns true if it was successful.");
 
     if (!TestNet() && vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Netcoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "FlapX is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Netcoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "FlapX is downloading blocks...");
 
     if (pindexBest->nHeight >= (!TestNet() ? BLOCK_HEIGHT_FINALPOW : BLOCK_HEIGHT_FINALPOW_TESTNET))
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");

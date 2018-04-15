@@ -104,9 +104,9 @@ void CWalletDB::ListAccountCreditDebit(const string& strAccount, list<CAccountin
             break;
 
         ssValue >> acentry;
-        // Added in NetcoinPOS
+        // Added in FlapXPOS
         ssKey >> acentry.nEntryNo;
-        // End Added in NetcoinPOS
+        // End Added in FlapXPOS
         entries.push_back(acentry);
     }
 
@@ -279,7 +279,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
                 ssKey >> nNumber;
                 if (nNumber > nAccountingEntryNumber)
                     nAccountingEntryNumber = nNumber;
-            // Added in NetcoinPOS
+            // Added in FlapXPOS
             if (!wss.fAnyUnordered)
             {
                 CAccountingEntry acentry;
@@ -287,7 +287,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
                 if (acentry.nOrderPos == -1)
                     wss.fAnyUnordered = true;
             }
-			// end added in NetcoinPOS
+			// end added in FlapXPOS
 
             }
             else if (strType == "key" || strType == "wkey")
@@ -445,10 +445,10 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             {
                 int64_t nIndex;
                 ssKey >> nIndex;
-				// Added in NetcoinPOS
+				// Added in FlapXPOS
             	CKeyPool keypool;
             	ssValue >> keypool;
-				// End Added in NetcoinPOS
+				// End Added in FlapXPOS
                 pwallet->setKeyPool.insert(nIndex);
 
             // If no metadata exists yet, create a default with the pool key's

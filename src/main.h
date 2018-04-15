@@ -60,7 +60,7 @@ static const int64_t MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 static const int64_t PREMINE = 1172000000 * COIN;
 
 
-// Netcoin PIR personal staking interest rate is organised into percentage reward bands based on the value of the coins being staked
+// FlapX PIR personal staking interest rate is organised into percentage reward bands based on the value of the coins being staked
 // madprofezzor@gmail.com
 
 static const int PIR_LEVELS = 6; // number of entries in PIR_THRESHOLDS
@@ -409,7 +409,7 @@ public:
      */
     int64_t GetValueIn(const MapPrevTx& mapInputs) const;
 
-    // Netcoin nVersion=1 and 2
+    // FlapX nVersion=1 and 2
     static bool AllowFree(double dPriority)
     {
         // Large (in bytes) low-priority (new, small-coin) transactions
@@ -417,7 +417,7 @@ public:
         return dPriority > COIN * 1440 / 250; // NetCoin: 1440 blocks found a day. Priority cutoff is 1 flapx day / 250 bytes.
     }
 
-    // Netcoin nVersion=1 and 2
+    // FlapX nVersion=1 and 2
     int64_t GetMinFee(unsigned int nBlockSize, enum GetMinFee_mode mode, unsigned int nBytes, bool fAllowFree) const;
     int64_t GetMinFee(unsigned int nBlockSize=1, bool fAllowFree=true, enum GetMinFee_mode mode=GMF_BLOCK) const;
 

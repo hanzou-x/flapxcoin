@@ -128,9 +128,6 @@
     </qresource>
     <qresource prefix="/translations">
         <file alias="en">locale/bitcoin_en.qm</file>
-        <file alias="ru">locale/bitcoin_ru.qm</file>
-        <file alias="nl">locale/bitcoin_nl.qm</file>
-        <file alias="fr">locale/bitcoin_fr.qm</file>
     </qresource>
     <qresource prefix="/toolTip">
         <file>res/tooltips/stakingTooltip.png</file>
@@ -158,7 +155,7 @@
         <file>res/tooltips/confirmSendActionTooltip.png</file>
         <file>res/tooltips/doubleClickToEditTooltip.png</file>
         <file>res/tooltips/copyCurrentAddressTooltip.png</file>
-        <file>res/tooltips/createNewNetcoinAddress.png</file>
+        <file>res/tooltips/createNewFlapXAddress.png</file>
         <file>res/tooltips/signMessageTooltip.png</file>
         <file>res/tooltips/verifyMessageTooltip.png</file>
         <file>res/tooltips/showQrCodeTooltip.png</file>

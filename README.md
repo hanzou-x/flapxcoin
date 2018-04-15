@@ -1,3 +1,7 @@
+TODO
+========
+
+Rewrite this for FlapX
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1a8b92aafc7d435288da2d19022080cb)](https://www.codacy.com/app/ghettomining/flapx?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=flapxfoundation/flapx&amp;utm_campaign=Badge_Grade)
 
@@ -24,7 +28,7 @@ POS activated on block 420,000 - Hard fork.
 
 POSV stake once each month to earn highest possible rewards incentivises running full nodes to increase POS security. Coin age gradually slows after 1 month with an aging half life of 90 days.
 
-Personal Investment Rate or PIR is a special reward algorithm unique for a PoS coin. The APR Stake reward increases in line with the value of the coins staked on a sliding scale.In other words the more Netcoin you own and stake the bigger the reward you earn. The last 3 years Netcoin had 3 different levels of PIR and it reached the last and final level end 2016.
+Personal Investment Rate or PIR is a special reward algorithm unique for a PoS coin. The APR Stake reward increases in line with the value of the coins staked on a sliding scale.In other words the more FlapX you own and stake the bigger the reward you earn. The last 3 years FlapX had 3 different levels of PIR and it reached the last and final level end 2016.
 The reward rates now are as followed: 0-999N --> 2%
                                       1000-9999N --> 4%
                                       10000-99999N --> 6%
@@ -51,7 +55,7 @@ or are controversial.
 
 The master branch is regularly built and tested, but is not guaranteed
 to be completely stable. Tags are regularly created to indicate new
-official, stable release versions of Netcoin coin.
+official, stable release versions of FlapX coin.
 
 Feature branches are created when there are major new features being
 worked on by several people.

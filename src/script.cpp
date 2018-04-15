@@ -337,7 +337,7 @@ bool IsLowDERSignature(const valtype &vchSig, bool haveHashType) {
     // If the S value is above the order of the curve divided by two, its
     // complement modulo the order could have been used instead, which is
     // one byte shorter when encoded correctly.
-    // Unfortunately Netcoin blockchain contains S-high signatures so we skip these
+    // Unfortunately FlapX blockchain contains S-high signatures so we skip these
     if (pindexBest->nHeight >= (!TestNet() ? LOW_S_CHECK_SIGNATURES : LOW_S_CHECK_SIGNATURES_TESTET))
     {
         if (!CKey::CheckSignatureElement(S, nLenS, true))

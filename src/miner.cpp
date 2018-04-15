@@ -129,7 +129,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
 
     if (!fProofOfStake)
     {
-        // Netcoin: all PoW blocks are version 2
+        // FlapX: all PoW blocks are version 2
         pblock->nVersion = 2;
 
         // CReserveKey reservekey(pwallet);
