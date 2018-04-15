@@ -83,7 +83,6 @@
         <file>res/images/FlapXcoin/FlapX Art/space2.png</file>
         <file>res/images/FlapXcoin/FlapX Art/DrNET.png</file>
         <file>res/images/FlapXcoin/Social/ML.png</file>
-        <file>res/images/FlapXcoin/Development/Tipbot.png</file>
         <file>res/images/FlapXcoin/FlapXCoin/Explorer.png</file>
         <file>res/images/FlapXcoin/FlapXCoin/Pool.png</file>
         <file>res/images/FlapXcoin/Community/GDC.png</file>
@@ -107,12 +106,20 @@
         <file>res/images/FlapXcoin/FlapXFM/FlapxFTH.png</file>
         <file>res/images/FlapXcoin/FlapXFM/FlapXKK.png</file>
         <file>res/images/FlapXcoin/Social/Gplay.png</file>
-        <file>res/images/FlapXcoin/Crypto Links/Fiatleak.png</file>
         <file>res/images/FlapXcoin/Crypto Links/GMC.png</file>
         <file>res/images/FlapXcoin/Crypto Links/CMC.png</file>
         <file>res/images/FlapXcoin/Crypto Links/1337F.png</file>
         <file>res/images/FlapXcoin/Crypto Links/AF.png</file>
         <file>res/images/FlapXcoin/Crypto Links/CCB.png</file>
+        <file>res/images/FlapXcoin/FlapXFM/RB.png</file>
+        <file>res/images/FlapXcoin/FlapXFM/FXFM.png</file>
+        <file>res/images/FlapXcoin/Crypto Links/Fiatleak.jpg</file>
+        <file>res/images/FlapXcoin/Crypto Links/MRR.png</file>
+        <file>res/images/FlapXcoin/Crypto Links/CCA.png</file>
+        <file>res/images/FlapXcoin/Development/CS.png</file>
+        <file>res/images/FlapXcoin/Development/cpa.png</file>
+        <file>res/images/FlapXcoin/Development/LC.png</file>
+        <file>res/images/FlapXcoin/Crypto Links/CryptoC.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>

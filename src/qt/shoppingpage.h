@@ -78,17 +78,6 @@ private:
 //Button Layout: Buttons Mapped to frames ie pushButton_211 = Frame 21 Button 1
 private slots:
 
-    void on_pushButton_clicked();
-
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_8_clicked();
-
-    void on_pushButton_9_clicked();
-
-    void on_pushButton_10_clicked();
-
-    void on_pushButton_11_clicked();
 
     void on_pushButton_111_clicked();
 
@@ -115,6 +104,16 @@ private slots:
     void on_pushButton_135_clicked();
 
     void on_pushButton_136_clicked();
+
+    void on_pushButton_141_clicked();
+
+    void on_pushButton_142_clicked();
+
+    void on_pushButton_143_clicked();
+
+    void on_pushButton_144_clicked();
+
+    void on_pushButton_145_clicked();
 
     void on_pushButton_201_clicked();
 
@@ -175,6 +174,18 @@ private slots:
     void on_pushButton_292_clicked();
 
     void on_pushButton_293_clicked();
+
+    void on_pushButton_331_clicked();
+
+    void on_pushButton_332_clicked();
+
+    void on_pushButton_333_clicked();
+
+    void on_pushButton_311_clicked();
+
+    void on_pushButton_312_clicked();
+
+    void on_pushButton_313_clicked();
 
 
 

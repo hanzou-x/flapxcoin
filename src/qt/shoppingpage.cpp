@@ -511,8 +511,33 @@ void ShoppingPage::on_pushButton_136_clicked()
 }
 
 
-//Community
-//NET
+//FlapXM
+void ShoppingPage::on_pushButton_141_clicked()
+{
+    QString link="https://sites.google.com/view/flapxcoin/flap-x-fm/for-the-horde";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_142_clicked()
+{
+    QString link="https://sites.google.com/view/flapxcoin/flap-x-fm/krewshul-krosshairs";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_143_clicked()
+{
+    QString link="https://sites.google.com/view/flapxcoin/flap-x-fm/crypto-takeover";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_144_clicked()
+{
+    QString link="https://sites.google.com/view/flapxcoin/flap-x-fm/reggae-blockchain";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_145_clicked()
+{
+    QString link="https://play.google.com/store/apps/details?id=com.flapxfm.radio";
+    QDesktopServices::openUrl(QUrl(link));
+}
+//communities
 void ShoppingPage::on_pushButton_201_clicked()
 {
     QString link="http://netcoin.io/";
@@ -672,44 +697,41 @@ void ShoppingPage::on_pushButton_293_clicked()
     QString link="https://youtu.be/zZ5gCGJorKk?t=1";
     QDesktopServices::openUrl(QUrl(link));
 }
-//Useful links tab
-void ShoppingPage::on_pushButton_8_clicked()
+//GDC
+void ShoppingPage::on_pushButton_331_clicked()
 {
-    QString link="http://forum.netcoin.io//";
+    QString link="https://grandcoin.info/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_332_clicked()
+{
+    QString link="https://discordapp.com/invite/ZrdbSNZ";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_333_clicked()
+{
+    QString link="https://www.crypto-city.com/index.php/grandcoin-gdc/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+//MAZA
+void ShoppingPage::on_pushButton_311_clicked()
+{
+    QString link="https://www.mazacoin.org/";
     QDesktopServices::openUrl(QUrl(link));
 }
 
-void ShoppingPage::on_pushButton_9_clicked()
+void ShoppingPage::on_pushButton_312_clicked()
 {
-    QString link="http://netcoinfoundation.io/";
+    QString link="https://discord.gg/x4qpdWD";
     QDesktopServices::openUrl(QUrl(link));
 }
 
-void ShoppingPage::on_pushButton_10_clicked()
+void ShoppingPage::on_pushButton_313_clicked()
 {
-    QString link="http://netcoin.io/";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_11_clicked()
-{
-    QString link="https://discord.gg/WgtVXNH";
+    QString link="https://bitcointalk.org/index.php?topic=508849.0";
     QDesktopServices::openUrl(QUrl(link));
 }
 
-
-//Development Site links
-void ShoppingPage::on_pushButton_clicked()
-{
-    QString link="http://netcoinfoundation.io/give/";
-    QDesktopServices::openUrl(QUrl(link));
-}
-
-//Pools
-void ShoppingPage::on_pushButton_2_clicked()
-{
-    QString link="https://www.mining-dutch.nl/pools/netcoin.php";
-    QDesktopServices::openUrl(QUrl(link));
-}
 
 ShoppingPage::~ShoppingPage()
 {
