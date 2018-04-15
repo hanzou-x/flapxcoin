@@ -120,6 +120,8 @@
         <file>res/images/FlapXcoin/Development/cpa.png</file>
         <file>res/images/FlapXcoin/Development/LC.png</file>
         <file>res/images/FlapXcoin/Crypto Links/CryptoC.png</file>
+        <file>res/images/FlapXcoin/Crypto Links/MOC.png</file>
+        <file>res/images/FlapXcoin/Crypto Links/LCW.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
