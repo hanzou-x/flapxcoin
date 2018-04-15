@@ -260,43 +260,37 @@ void BitcoinGUI::createActions()
 
     overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Overview"), this);
 
-    overviewAction->setToolTip(tr("<html><head/><body><p><img src=:/toolTip/res/tooltips/overviewTooltip.png/></p></body></html>"));
+
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-    sendCoinsAction->setToolTip(tr("<html><head/><body><p><img src=:/toolTip/res/tooltips/sendTooltip.png/></p></body></html>"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
     receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive coins"), this);
-    receiveCoinsAction->setToolTip(tr("<html><head/><body><p><img src=:/toolTip/res/tooltips/recieveTooltip.png/></p></body></html>"));
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(receiveCoinsAction);
 
     historyAction = new QAction(QIcon(":/icons/history"), tr("&Transactions"), this);
-    historyAction->setToolTip(tr("<html><head/><body><p><img src=:/toolTip/res/tooltips/transactionTooltip.png/></p></body></html>"));
     historyAction->setCheckable(true);
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
     addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Address Book"), this);
-    addressBookAction->setToolTip(tr("<html><head/><body><p><img src=:/toolTip/res/tooltips/addressTooltip.png/></p></body></html>"));
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
     shoppingAction = new QAction(QIcon(":/icons/res/icons/services.png"), tr("&Services"), this);
-    shoppingAction->setToolTip(tr("<html><head/><body><p><img src=:/toolTip/res/tooltips/servicesTooltip.png/></p></body></html>"));
     shoppingAction->setCheckable(true);
     shoppingAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     tabGroup->addAction(shoppingAction);
 
     networkAction = new QAction(QIcon(":/icons/res/icons/stakingTab.png"), tr("&Staking"), this);
-    networkAction->setToolTip(tr("<html><head/><body><p><img src=:/toolTip/res/tooltips/stakingTabTooltip.png/></p></body></html>"));
     networkAction->setCheckable(true);
     networkAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
     tabGroup->addAction(networkAction);
