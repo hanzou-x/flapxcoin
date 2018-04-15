@@ -257,9 +257,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -512,9 +509,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
             </property>
@@ -637,9 +631,6 @@
                </colorrole>
               </disabled>
              </palette>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
@@ -764,9 +755,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
             </property>
@@ -889,9 +877,6 @@
                </colorrole>
               </disabled>
              </palette>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
@@ -1150,9 +1135,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
             </property>
@@ -1275,9 +1257,6 @@
                </colorrole>
               </disabled>
              </palette>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
@@ -1438,9 +1417,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
             </property>
@@ -1560,9 +1536,6 @@
                </colorrole>
               </disabled>
              </palette>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
@@ -1714,9 +1687,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
             </property>
@@ -1837,9 +1807,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
             </property>
@@ -1959,9 +1926,6 @@
                </colorrole>
               </disabled>
              </palette>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
@@ -2431,9 +2395,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
             </property>
@@ -2593,9 +2554,6 @@
               </disabled>
              </palette>
             </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
             </property>
@@ -2715,9 +2673,6 @@
                </colorrole>
               </disabled>
              </palette>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
@@ -2851,9 +2806,6 @@
                </colorrole>
               </disabled>
              </palette>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;</string>
@@ -7829,9 +7781,6 @@
                      </disabled>
                     </palette>
                    </property>
-                   <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
                    <property name="styleSheet">
                     <string notr="true">background:transparent;</string>
                    </property>
@@ -8027,9 +7976,6 @@
                      </disabled>
                     </palette>
                    </property>
-                   <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
                    <property name="styleSheet">
                     <string notr="true">background:transparent;</string>
                    </property>
@@ -8199,9 +8145,6 @@
                      </disabled>
                     </palette>
                    </property>
-                   <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
                    <property name="styleSheet">
                     <string notr="true">background:transparent;</string>
                    </property>
@@ -8357,9 +8300,6 @@
                       </colorrole>
                      </disabled>
                     </palette>
-                   </property>
-                   <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">background:transparent;</string>
@@ -8530,9 +8470,6 @@
                      </disabled>
                     </palette>
                    </property>
-                   <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
                    <property name="styleSheet">
                     <string notr="true">background:transparent;</string>
                    </property>
@@ -8688,9 +8625,6 @@
                       </colorrole>
                      </disabled>
                     </palette>
-                   </property>
-                   <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/CoinserverTooltip.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">background:transparent;</string>
@@ -9977,13 +9911,13 @@
              <property name="minimumSize">
               <size>
                <width>250</width>
-               <height>100</height>
+               <height>50</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>250</width>
-               <height>100</height>
+               <height>50</height>
               </size>
              </property>
              <property name="palette">
@@ -10097,13 +10031,13 @@
              <property name="minimumSize">
               <size>
                <width>250</width>
-               <height>100</height>
+               <height>50</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>250</width>
-               <height>100</height>
+               <height>50</height>
               </size>
              </property>
              <property name="palette">
@@ -10217,13 +10151,13 @@
              <property name="minimumSize">
               <size>
                <width>250</width>
-               <height>100</height>
+               <height>50</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>250</width>
-               <height>100</height>
+               <height>50</height>
               </size>
              </property>
              <property name="palette">
