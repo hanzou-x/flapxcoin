@@ -28,11 +28,6 @@ extern const std::string CLIENT_NAME;
 extern const std::string CLIENT_BUILD;
 extern const std::string CLIENT_DATE;
 
-///
-///  BlockIndex Versioning
-///
-static const int BLOCKINDEX_VERSION_POS = 2010000;
-
 //
 // database format versioning
 //

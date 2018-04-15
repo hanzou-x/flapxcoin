@@ -1245,23 +1245,21 @@ public:
         READWRITE(nFile);
         READWRITE(nBlockPos);
         READWRITE(nHeight);
-        if (nVersion>=BLOCKINDEX_VERSION_POS){
-		    READWRITE(nMint);
-	        READWRITE(nMoneySupply);
-	        READWRITE(nFlags);
-	        READWRITE(nStakeModifier);
-	        if (IsProofOfStake())
-	        {
-	            READWRITE(prevoutStake);
-	            READWRITE(nStakeTime);
-	        }
-	        else if (fRead)
-	        {
-	            const_cast<CDiskBlockIndex*>(this)->prevoutStake.SetNull();
-	            const_cast<CDiskBlockIndex*>(this)->nStakeTime = 0;
-	        }
-	        READWRITE(hashProof);	
-		}
+	READWRITE(nMint);
+        READWRITE(nMoneySupply);
+        READWRITE(nFlags);
+        READWRITE(nStakeModifier);
+        if (IsProofOfStake())
+        {
+            READWRITE(prevoutStake);
+            READWRITE(nStakeTime);
+        }
+        else if (fRead)
+        {
+            const_cast<CDiskBlockIndex*>(this)->prevoutStake.SetNull();
+            const_cast<CDiskBlockIndex*>(this)->nStakeTime = 0;
+        }
+        READWRITE(hashProof);	
 
         // block header
         READWRITE(this->nVersion);
@@ -1270,9 +1268,7 @@ public:
         READWRITE(nTime);
         READWRITE(nBits);
         READWRITE(nNonce);
-        if (nVersion>=BLOCKINDEX_VERSION_POS){
-		  READWRITE(blockHash);
-		}
+	READWRITE(blockHash);
     )
 
     uint256 GetBlockHash() const
