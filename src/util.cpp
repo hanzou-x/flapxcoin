@@ -3,6 +3,7 @@
 // Copyright (c) 2011-2012 Litecoin Developers
 // Copyright (c) 2013 Luckycoin Developers
 // Copyright (c) 2013 NetCoin Developers
+// Copyright (c) 2018 FlapX Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1012,13 +1013,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\NetCoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\NetCoin
-    // Mac: ~/Library/Application Support/NetCoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\FlapX
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\FlapX
+    // Mac: ~/Library/Application Support/FlapX
     // Unix: ~/.flapx
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "NetCoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "FlapX";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1030,7 +1031,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "NetCoin";
+    return pathRet / "FlapX";
 #else
     // Unix
     return pathRet / ".flapx";
@@ -1115,7 +1116,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     // if (!streamConfig.good())
-    //    return; // No NetCoin.conf file is OK
+    //    return; // No FlapX.conf file is OK
 
     set<string> setOptions;
     setOptions.insert("*");
@@ -1263,7 +1264,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
         int64_t nMedian = vTimeOffsets.median();
         std::vector<int64_t> vSorted = vTimeOffsets.sorted();
         // Only let other nodes change our time by so much
-        if (abs64(nMedian) < 35 * 60) // NetCoin: changed maximum adjust to 35 mins to avoid letting peers change our time too much in case of an attack.
+        if (abs64(nMedian) < 35 * 60) // FlapX: changed maximum adjust to 35 mins to avoid letting peers change our time too much in case of an attack.
         {
             nTimeOffset = nMedian;
         }
@@ -1286,7 +1287,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                     string strMessage = _("Warning: Please check that your computer's date and time are correct.  If your clock is wrong Linkcoin will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
-                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("NetCoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
+                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("FlapX"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
                 }
             }
         }

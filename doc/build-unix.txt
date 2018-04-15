@@ -83,9 +83,6 @@ cd to build folder
 qmake "USE_QRCODE=1"
 make
 
-If leveldb build_detect_platform error do 
-chmod 755 src/leveldb/build_detect_platform
-
 
 Dependency Build Instructions: Gentoo
 -------------------------------------
@@ -93,7 +90,7 @@ Dependency Build Instructions: Gentoo
 emerge -av1 --noreplace boost glib openssl sys-libs/db:4.8
 
 Take the following steps to build (no UPnP support):
- cd ${NETCOIN_DIR}/src
+ cd ${FLAPX_DIR}/src
  make -f makefile.unix USE_UPNP= USE_IPV6=1 BDB_INCLUDE_PATH='/usr/include/db4.8'
  strip flapxd
 

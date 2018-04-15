@@ -6,7 +6,7 @@
 // Copyright (c) 2013 PandaCoin Developers
 // Copyright (c) 2014 NetCoin Developers
 // Copyright (c) 2015 BlackCoin Developers
-// Copyright (c) 2018 FlapXcoin Developers
+// Copyright (c) 2018 FlapX Developers
 
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -49,9 +49,9 @@ libzerocoin::Params* ZCParams;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
 // initial flapx difficulty params - preKGW then digishield
-static const int64_t nTargetTimespan = 60 * 60; // NetCoin: every 60 minutes
-unsigned int nTargetSpacing = 1 * 60; // NetCoin: 60 sec
-unsigned int nStakeTargetSpacing = 2 * 60; // NetCoin: 60 sec
+static const int64_t nTargetTimespan = 60 * 60; // FlapX: every 60 minutes
+unsigned int nTargetSpacing = 1 * 60; // FlapX: 60 sec
+unsigned int nStakeTargetSpacing = 2 * 60; // FlapX: 60 sec
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;  // 60 blocks
 unsigned int nStakeMinAge = 42 * 60 * 60; // 4 hour
 unsigned int nStakeMaxAge = 2592000; // 30 days
@@ -88,7 +88,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "NetCoin Signed Message:\n";
+const string strMessageMagic = "FlapX Signed Message:\n";
 
 double dHashesPerSec;
 int64_t nHPSTimerStart;
@@ -1085,13 +1085,6 @@ void static PruneOrphanBlocks()
     }
 }
 
-int static generateMTRandom(unsigned int s, int range)
-{
-    random::mt19937 gen(s);
-    random::uniform_int_distribution<> dist(1, range);
-    return dist(gen);
-}
-
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees, uint256 prevHash)
 {
@@ -1263,7 +1256,7 @@ unsigned int static GetNextWorkRequired_V1(const CBlockIndex* pindexLast, const 
         return pindexLast->nBits;
     }
 
-    // NetCoin: This fixes an issue where a 51% attack can change difficulty at will.
+    // FlapX: This fixes an issue where a 51% attack can change difficulty at will.
     // Go back the full period unless it's the first retarget after genesis. Code courtesy of Art Forz
     int blockstogoback = nInterval-1;
     if ((pindexLast->nHeight+1) != nInterval)
@@ -2914,7 +2907,7 @@ bool CheckDiskSpace(uint64_t nAdditionalBytes)
         string strMessage = _("Warning: Disk space is low!");
         strMiscWarning = strMessage;
         printf("*** %s\n", strMessage.c_str());
-        uiInterface.ThreadSafeMessageBox(strMessage, "NetCoin", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox(strMessage, "FlapX", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
         StartShutdown();
         return false;
     }

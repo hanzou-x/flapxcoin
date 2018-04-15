@@ -3,6 +3,7 @@
 // Copyright (c) 2011-2012 Litecoin Developers
 // Copyright (c) 2013 Florincoin Developers
 // Copyright (c) 2013-2014 NetCoin Developers
+// Copyright (c) 2018 FlapX Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef BITCOIN_MAIN_H
@@ -55,7 +56,7 @@ static const int64_t MIN_TX_FEE = 1000000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t DUST_SOFT_LIMIT = 100000000;
 static const int64_t DUST_HARD_LIMIT = 1000000;
-static const int64_t MAX_MONEY = 2000000000 * COIN; // NetCoin: maximum of 325M coins
+static const int64_t MAX_MONEY = 2000000000 * COIN; // FlapX: maximum of 325M coins
 static const int64_t MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 static const int64_t PREMINE = 1172000000 * COIN;
 
@@ -414,7 +415,7 @@ public:
     {
         // Large (in bytes) low-priority (new, small-coin) transactions
         // need a fee.
-        return dPriority > COIN * 1440 / 250; // NetCoin: 1440 blocks found a day. Priority cutoff is 1 flapx day / 250 bytes.
+        return dPriority > COIN * 1440 / 250; // FlapX: 1440 blocks found a day. Priority cutoff is 1 flapx day / 250 bytes.
     }
 
     // FlapX nVersion=1 and 2

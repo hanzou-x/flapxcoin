@@ -3,11 +3,8 @@ TODO
 
 Rewrite this for FlapX
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1a8b92aafc7d435288da2d19022080cb)](https://www.codacy.com/app/ghettomining/flapx?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=flapxfoundation/flapx&amp;utm_campaign=Badge_Grade)
 
-![alt text](http://flapx.io/wp-content/uploads/2013/12/NETCOIN_TRANPARENT_3-INCH_4WEBno-shadow-300x257.png)
-
-NetCoin (NET) - Litecoin / PeerCoin Hybrid POW/POSV hybrid with Personal Investment Rate
+FlapX (FLAPX) - Litecoin / PeerCoin Hybrid POW/POSV hybrid with Personal Investment Rate
 
 
 The default ports: Connection 11310, and RPC 11311
@@ -38,7 +35,7 @@ The reward rates now are as followed: 0-999N --> 2%
 
 120 seconds block time POS
 1 hour minimum age for staking.  30 days max age.
-FAIR-WEIGHT protocol replaces the idea of 'block splitting' to prevent very large NET holders signing lots of POS blocks.
+FAIR-WEIGHT protocol replaces the idea of 'block splitting' to prevent very large FLAPX holders signing lots of POS blocks.
 
 70 confirmations for minted blocks
    	

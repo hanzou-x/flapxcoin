@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About NetCoin</string>
+   <string>About FlapX</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -171,7 +171,7 @@
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string>&lt;b&gt;NetCoin&lt;/b&gt; version</string>
+          <string>&lt;b&gt;FlapX&lt;/b&gt; version</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -334,11 +334,10 @@
 Copyright © 8888 Bitcoin Developers
 Copyright © 8888 PeerCoin Developers
 Copyright © 8888 NetCoin Developers
-Copyright © 8888 FlapXcoin Developers
+Copyright © 8888 FlapX Developers
 
-FlapXcoin is built on the NetCoin Framework
-NetCoin design by: who,meee and regtable69
-Translated by: Arjan Dekkers - Dutch</string>
+FlapX is built on the NetCoin Framework
+NetCoin design by: who,meee and regtable69</string>
        </property>
        <property name="textInteractionFlags">
         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>

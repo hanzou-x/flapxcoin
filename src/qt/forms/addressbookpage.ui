@@ -137,7 +137,7 @@
            </palette>
           </property>
           <property name="text">
-           <string>Here are your NetCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</string>
+           <string>Here are your FlapX addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</string>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>

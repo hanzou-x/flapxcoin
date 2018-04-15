@@ -3,6 +3,7 @@
 // Copyright (c) 2011-2012 The Litecoin Developers
 // Copyright (c) 2013 Florincoin developers
 // Copyright (c) 2013 NetCoin developers
+// Copyright (c) 2018 FlapX Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -219,7 +220,7 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
                 "stop\n"
-                "Stop NetCoin server.");
+                "Stop FlapX server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
     return "FlapX server stopping";
@@ -529,7 +530,7 @@ bool HTTPAuthorized(map<string, string>& mapHeaders)
 }
 
 //
-// JSON-RPC protocol.  NetCoin speaks version 1.0 for maximum compatibility,
+// JSON-RPC protocol.  FlapX speaks version 1.0 for maximum compatibility,
 // but uses JSON-RPC 1.1/2.0 standards for parts of the 1.0 standard that were
 // unspecified (HTTP errors and contents of 'error').
 //
