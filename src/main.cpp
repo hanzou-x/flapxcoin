@@ -49,10 +49,10 @@ libzerocoin::Params* ZCParams;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
 // initial netcoin difficulty params - preKGW then digishield
-static const int64_t nTargetTimespan = 60 * 60;	// NetCoin: every 60 minutes
+static const int64_t nTargetTimespan = 60 * 60; // NetCoin: every 60 minutes
 unsigned int nTargetSpacing = 1 * 60; // NetCoin: 60 sec
 unsigned int nStakeTargetSpacing = 2 * 60; // NetCoin: 60 sec
-static const int64_t nInterval = nTargetTimespan / nTargetSpacing;	// 60 blocks
+static const int64_t nInterval = nTargetTimespan / nTargetSpacing;  // 60 blocks
 unsigned int nStakeMinAge = 42 * 60 * 60; // 4 hour
 unsigned int nStakeMaxAge = 2592000; // 30 days
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
@@ -1098,13 +1098,13 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees, uint256 prevHash)
     int64_t nSubsidy;
 
     if ( nHeight == 1 ) {
-	nSubsidy = PREMINE;
+       nSubsidy = PREMINE;
     } else if ( nHeight < PIR_PHASEBLOCKS ) {
-	nSubsidy = 15 * COIN;
+       nSubsidy = 15 * COIN;
     } else if ( nHeight < 2 * PIR_PHASEBLOCKS ) {
-	nSubsidy = 13 * COIN;
+       nSubsidy = 13 * COIN;
     } else {
-	nSubsidy = 11 * COIN;
+       nSubsidy = 11 * COIN;
     }
 
     return nSubsidy + nFees;
@@ -1298,18 +1298,18 @@ unsigned int static GetNextWorkRequired_V1(const CBlockIndex* pindexLast, const 
 
 unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, uint64_t TargetBlocksSpacingSeconds, uint64_t PastBlocksMin, uint64_t PastBlocksMax) {
     /* current difficulty formula, megacoin - kimoto gravity well */
-    const CBlockIndex  *BlockLastSolved				= pindexLast;
-    const CBlockIndex  *BlockReading				= pindexLast;
+    const CBlockIndex  *BlockLastSolved             = pindexLast;
+    const CBlockIndex  *BlockReading                = pindexLast;
 
-    uint64_t				PastBlocksMass				= 0;
-    int64_t				PastRateActualSeconds		= 0;
-    int64_t				PastRateTargetSeconds		= 0;
-    double				PastRateAdjustmentRatio		= double(1);
-    CBigNum				PastDifficultyAverage;
-    CBigNum				PastDifficultyAveragePrev;
-    double				EventHorizonDeviation;
-    double				EventHorizonDeviationFast;
-    double				EventHorizonDeviationSlow;
+    uint64_t                PastBlocksMass              = 0;
+    int64_t             PastRateActualSeconds       = 0;
+    int64_t             PastRateTargetSeconds       = 0;
+    double              PastRateAdjustmentRatio     = double(1);
+    CBigNum             PastDifficultyAverage;
+    CBigNum             PastDifficultyAveragePrev;
+    double              EventHorizonDeviation;
+    double              EventHorizonDeviationFast;
+    double              EventHorizonDeviationSlow;
 
     if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || (uint64_t)BlockLastSolved->nHeight < PastBlocksMin) { return Params().ProofOfWorkLimit().GetCompact(); }
 
@@ -1317,20 +1317,20 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, uint64_t Ta
         if (PastBlocksMax > 0 && i > PastBlocksMax) { break; }
         PastBlocksMass++;
 
-        if (i == 1)	{ PastDifficultyAverage.SetCompact(BlockReading->nBits); }
-        else		{ PastDifficultyAverage = ((CBigNum().SetCompact(BlockReading->nBits) - PastDifficultyAveragePrev) / i) + PastDifficultyAveragePrev; }
+        if (i == 1) { PastDifficultyAverage.SetCompact(BlockReading->nBits); }
+        else        { PastDifficultyAverage = ((CBigNum().SetCompact(BlockReading->nBits) - PastDifficultyAveragePrev) / i) + PastDifficultyAveragePrev; }
         PastDifficultyAveragePrev = PastDifficultyAverage;
 
-        PastRateActualSeconds			= BlockLastSolved->GetBlockTime() - BlockReading->GetBlockTime();
-        PastRateTargetSeconds			= TargetBlocksSpacingSeconds * PastBlocksMass;
-        PastRateAdjustmentRatio			= double(1);
+        PastRateActualSeconds           = BlockLastSolved->GetBlockTime() - BlockReading->GetBlockTime();
+        PastRateTargetSeconds           = TargetBlocksSpacingSeconds * PastBlocksMass;
+        PastRateAdjustmentRatio         = double(1);
         if (PastRateActualSeconds < 0) { PastRateActualSeconds = 0; }
         if (PastRateActualSeconds != 0 && PastRateTargetSeconds != 0) {
-        PastRateAdjustmentRatio			= double(PastRateTargetSeconds) / double(PastRateActualSeconds);
+        PastRateAdjustmentRatio         = double(PastRateTargetSeconds) / double(PastRateActualSeconds);
         }
-        EventHorizonDeviation			= 1 + (0.7084 * pow((double(PastBlocksMass)/double(144)), -1.228));
-        EventHorizonDeviationFast		= EventHorizonDeviation;
-        EventHorizonDeviationSlow		= 1 / EventHorizonDeviation;
+        EventHorizonDeviation           = 1 + (0.7084 * pow((double(PastBlocksMass)/double(144)), -1.228));
+        EventHorizonDeviationFast       = EventHorizonDeviation;
+        EventHorizonDeviationSlow       = 1 / EventHorizonDeviation;
 
         if (PastBlocksMass >= PastBlocksMin) {
             if ((PastRateAdjustmentRatio <= EventHorizonDeviationSlow) || (PastRateAdjustmentRatio >= EventHorizonDeviationFast)) { assert(BlockReading); break; }
@@ -1350,13 +1350,13 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, uint64_t Ta
 
 unsigned int static GetNextWorkRequired_KGW(const CBlockIndex* pindexLast)
 {
-    static const int64_t	BlocksTargetSpacing			= 1 * 60; // 1 minute
-    unsigned int		TimeDaySeconds				= 60 * 60 * 24;
+    static const int64_t    BlocksTargetSpacing         = 1 * 60; // 1 minute
+    unsigned int        TimeDaySeconds              = 60 * 60 * 24;
 
-    int64_t				PastSecondsMin				= TimeDaySeconds * 0.01;
-    int64_t				PastSecondsMax				= TimeDaySeconds * 0.14;
-    uint64_t				PastBlocksMin				= PastSecondsMin / BlocksTargetSpacing;
-    uint64_t				PastBlocksMax				= PastSecondsMax / BlocksTargetSpacing;
+    int64_t             PastSecondsMin              = TimeDaySeconds * 0.01;
+    int64_t             PastSecondsMax              = TimeDaySeconds * 0.14;
+    uint64_t                PastBlocksMin               = PastSecondsMin / BlocksTargetSpacing;
+    uint64_t                PastBlocksMax               = PastSecondsMax / BlocksTargetSpacing;
 
     return KimotoGravityWell(pindexLast, BlocksTargetSpacing, PastBlocksMin, PastBlocksMax);
 }
@@ -2825,7 +2825,7 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
 
     printf("ProcessBlock: ACCEPTED\n");
 
-	if (fGlobalStakeForCharity && !IsInitialBlockDownload())
+    if (fGlobalStakeForCharity && !IsInitialBlockDownload())
         pwalletMain->StakeForCharity();
 
    // ppcoin: if responsible for sync-checkpoint send it
@@ -2988,7 +2988,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
 #if 0
         // Genesis block
-        const char* pszTimestamp = "Aug 31, 2013: US STOCKS-Wall Street falls, ends worst month since May 2012.";
+        const char* pszTimestamp = "Sat Apr 14 20:10:41 PDT 2018 - FlapX arises from the ashes of Flappycoin";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -3003,25 +3003,24 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashMerkleRoot = block.BuildMerkleTree();
 
         block.nVersion = 1;
-        block.nTime    = 1377903314;
+        block.nTime    = 1523761963;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 12344321;
+        block.nNonce   = 151917;
 
-		if (fTestNet)
+#if 0
+        if (fTestNet)
         {
             block.nTime = 1300000000;
             block.nNonce = 0;
-                //block.nTime    = 1402442819;
-                //block.nBits    = bnProofOfWorkLimit.GetCompact();
-                //block.nNonce   = 1261171;
         }
+#endif
 
         //// debug print
         printf("block.GetHash() = %s\n", block.GetHash().ToString().c_str());
         printf("block.hashMerkleRoot = %s\n", block.hashMerkleRoot.ToString().c_str());
 
         // If genesis block hash does not match, then generate new genesis hash.
-        if (true && block.GetHash() != (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet))
+        if (block.GetHash() != Params().GenesisBlock().GetHash())
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -3047,15 +3046,15 @@ bool LoadBlockIndex(bool fAllowNew)
                 }
             }
  
-			printf("block.GetHash = %s\n", block.GetHash().ToString().c_str());
+            printf("block.GetHash = %s\n", block.GetHash().ToString().c_str());
         }
 
-	block.print();
+        block.print();
         assert(block.hashMerkleRoot == uint256("0xe5981b72a47998b021ee8995726282d1a575477897d9d5a319167601fffebb21"));
-        assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
+        assert(block.GetHash() == Params().GenesisBlock().GetHash());
 #endif
 
-        CBlock &block = const_cast<CBlock&>(Params().GenesisBlock());
+	CBlock &block = const_cast<CBlock&>(Params().GenesisBlock());
 
         // Start new block file
         unsigned int nFile;
@@ -4043,7 +4042,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
     if (pfrom->fNetworkNode)
         if (strCommand == "version" || strCommand == "addr" ||
             strCommand == "inv" || strCommand == "getdata" ||
-	    strCommand == "ping")
+            strCommand == "ping")
             AddressCurrentlyConnected(pfrom->addr);
 
     return true;

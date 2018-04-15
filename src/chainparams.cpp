@@ -61,7 +61,7 @@ public:
         // be spent as it did not originally exist in the database.
         //
 
-        const char* pszTimestamp = "Aug 31, 2013: US STOCKS-Wall Street falls, ends worst month since May 2012.";
+        const char* pszTimestamp = "Sat Apr 14 20:10:41 PDT 2018 - FlapX arises from the ashes of Flappycoin";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -73,13 +73,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1377903314;
+        genesis.nTime    = 1523761963;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nNonce   = 12344321;
+        genesis.nNonce   = 151917;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x38624e3834cfdc4410a5acbc32f750171aadad9620e6ba6d5c73201c16f7c8d1"));
-        assert(genesis.hashMerkleRoot == uint256("0xe5981b72a47998b021ee8995726282d1a575477897d9d5a319167601fffebb21"));
+        assert(hashGenesisBlock == uint256("0xf30d6d37c276519974c14eae52dac5538b2bdc358f2e4a3b48a14b201eb48fed"));
+        assert(genesis.hashMerkleRoot == uint256("0x9e17be6aefbffc74cf4deab73f93bd050e696008fe28c56de80520a22b05fafb"));
 
         vSeeds.push_back(CDNSSeedData("presstab.pw", "netseed.presstab.pw"));
 
@@ -131,7 +131,9 @@ public:
         // genesis.nBits  = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce = 0;
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x4a1ed64aed30d471b268b7a3ba634d4c63955700db462093a20e3f1f9db6a13f"));
+	// genesis.print();
+        assert(hashGenesisBlock == uint256("0x9ff8786e790c41e6f44a926b8b2c70183eb655e7ef188a4630408164dd13bc6b"));
+        assert(genesis.hashMerkleRoot == uint256("0x9e17be6aefbffc74cf4deab73f93bd050e696008fe28c56de80520a22b05fafb"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
