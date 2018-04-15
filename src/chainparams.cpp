@@ -53,8 +53,8 @@ public:
         pchMessageStart[2] = 0xa5;
         pchMessageStart[3] = 0xdb;
         vAlertPubKey = ParseHex("04ef014b36647e8433a2cedf76f1d6ea0bc5914ba936fadceda90d7472da3cf442469d3a1ab5ee416e7428726761dd3188bda3d0ae163db491f8ca0bdad92a0506");
-        nDefaultPort = 11310;
-        nRPCPort = 11211;
+        nDefaultPort = 11410;
+        nRPCPort = 11311;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -83,8 +83,8 @@ public:
 
         vSeeds.push_back(CDNSSeedData("presstab.pw", "netseed.presstab.pw"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 112);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 5);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75); //X
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 80); //Z
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1, 240);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
@@ -123,8 +123,8 @@ public:
         pchMessageStart[3] = 0xf1;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
         vAlertPubKey = ParseHex("0471dc165db490094d35cde15b1f5d755fa6ad6f2b5ed0f340e3f17f57389c3c2af113a8cbcc885bde73305a553b5640c83021128008ddf882e856336269080496");
-        nDefaultPort = 21310;
-        nRPCPort = 22444;
+        nDefaultPort = 21410;
+        nRPCPort = 21311;
         strDataDir = "testnet";
 
         genesis.nTime    = 1300000000;
@@ -136,8 +136,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 111);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 196);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 137); //x
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 142); //z
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();

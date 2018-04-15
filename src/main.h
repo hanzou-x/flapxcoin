@@ -55,8 +55,9 @@ static const int64_t MIN_TX_FEE = 1000000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t DUST_SOFT_LIMIT = 100000000;
 static const int64_t DUST_HARD_LIMIT = 1000000;
-static const int64_t MAX_MONEY = 325000000 * COIN; // NetCoin: maximum of 325M coins
+static const int64_t MAX_MONEY = 2000000000 * COIN; // NetCoin: maximum of 325M coins
 static const int64_t MIN_TXOUT_AMOUNT = MIN_TX_FEE;
+static const int64_t PREMINE = 1172000000 * COIN;
 
 
 // Netcoin PIR personal staking interest rate is organised into percentage reward bands based on the value of the coins being staked
@@ -76,9 +77,9 @@ static const int64_t PIR_THRESHOLDS[PIR_LEVELS] = {
 }; // unit is netcoins.  Must start with 0
 
 static const int64_t PIR_RATES[PIR_PHASES][PIR_LEVELS] = {
-        {10,15,20,30,80,100},   // Year 1
-        {20,25,30,35,40,45 },   // Year 2
-        {2,4,6,7,8,10 }    // Year 3+
+        {17,15,13,10,13,15},   // Year 1
+        {15,13,11,9,11,13},    // Year 2
+        {13,11,9,7,9,11}       // Year 3+
 };
 
 
