@@ -53,7 +53,7 @@ static const int64_t nTargetTimespan = 60 * 60; // FlapX: every 60 minutes
 unsigned int nTargetSpacing = 1 * 60; // FlapX: 60 sec
 unsigned int nStakeTargetSpacing = 2 * 60; // FlapX: 60 sec
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;  // 60 blocks
-unsigned int nStakeMinAge = 42 * 60 * 60; // 4 hour
+unsigned int nStakeMinAge = 42 * 60 * 60; // 42 hour
 unsigned int nStakeMaxAge = 2592000; // 30 days
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
