@@ -731,6 +731,93 @@ void ShoppingPage::on_pushButton_313_clicked()
     QString link="https://bitcointalk.org/index.php?topic=508849.0";
     QDesktopServices::openUrl(QUrl(link));
 }
+//cryptolinks
+void ShoppingPage::on_pushButton_501_clicked()
+{
+    QString link="https://cryptohub.online/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_502_clicked()
+{
+    QString link="https://tradesatoshi.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_503_clicked()
+{
+    QString link="https://www.cryptopia.co.nz";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_504_clicked()
+{
+    QString link="http://fiatleak.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_505_clicked()
+{
+    QString link="https://www.crypto-city.com/index.php/crypto-city-academy";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_506_clicked()
+{
+    QString link="https://playforcrypto.com/index.php?action=register&referrer=ukmayhem";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_507_clicked()
+{
+    QString link="https://www.cryptocompare.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_508_clicked()
+{
+    QString link="http://mapofcoins.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_509_clicked()
+{
+    QString link="https://www.livecoinwatch.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_510_clicked()
+{
+    QString link="https://www.miningrigrentals.com/register?ref=107473";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_511_clicked()
+{
+    QString link="https://altcoinsfoundation.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_512_clicked()
+{
+    QString link="https://give-me-coins.com";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_513_clicked()
+{
+    QString link="http://www.1337fah.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_514_clicked()
+{
+    QString link="https://coinmarketcap.com/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void ShoppingPage::on_pushButton_515_clicked()
+{
+    QString link="http://cryptochainer.com/dir/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+
 
 
 ShoppingPage::~ShoppingPage()

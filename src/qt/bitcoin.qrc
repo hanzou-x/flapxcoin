@@ -113,7 +113,6 @@
         <file>res/images/FlapXcoin/Crypto Links/CCB.png</file>
         <file>res/images/FlapXcoin/FlapXFM/RB.png</file>
         <file>res/images/FlapXcoin/FlapXFM/FXFM.png</file>
-        <file>res/images/FlapXcoin/Crypto Links/Fiatleak.jpg</file>
         <file>res/images/FlapXcoin/Crypto Links/MRR.png</file>
         <file>res/images/FlapXcoin/Crypto Links/CCA.png</file>
         <file>res/images/FlapXcoin/Development/CS.png</file>
@@ -123,8 +122,9 @@
         <file>res/images/FlapXcoin/Crypto Links/MOC.png</file>
         <file>res/images/FlapXcoin/Crypto Links/LCW.png</file>
         <file>res/images/FlapXcoin/Crypto Links/CH.png</file>
-        <file>res/images/FlapXcoin/Crypto Links/Topia.png</file>
         <file>res/images/FlapXcoin/Crypto Links/TradeSat.png</file>
+        <file>res/images/FlapXcoin/Crypto Links/Topia.png</file>
+        <file>res/images/FlapXcoin/Crypto Links/Fiatleak.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
