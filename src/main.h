@@ -101,7 +101,7 @@ static const int fHaveUPnP = false;
 static const int BLOCK_HEIGHT_KGW_START = 2590; // HISTORICAL HARD FORK. DO NOT CHANGE
 static const int BLOCK_HEIGHT_POS_AND_DIGISHIELD_START = 2600; //POS + DIGISHIELD HISTORICAL FORK
 static const int BLOCK_HEIGHT_DIGISHIELD_FIX_START = 2610; //DIGISHIELD FIX FORK
-static const int BLOCK_HEIGHT_FINALPOW = 10000000 WHAT EVER HEIGHT U WANT TO DIE OFF; // this is where the proof of work ends.
+static const int BLOCK_HEIGHT_FINALPOW = 10000000; WHAT EVER HEIGHT U WANT TO DIE OFF; // this is where the proof of work ends.
 static const int LOW_S_CHECK_SIGNATURES = 1300000; // CHECK SIGNATURE FORK
 
 static const int BLOCK_HEIGHT_KGW_START_TESTNET = 5;
