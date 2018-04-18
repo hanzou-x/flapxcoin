@@ -1,14 +1,11 @@
-TODO
+FLAPXZERO DAY
 ========
-
-Rewrite this for FlapX
 
 
 FlapX (FLAPX) - Litecoin / PeerCoin Hybrid POW/POSV hybrid with Personal Investment Rate
 
 
-The default ports: Connection 11310, and RPC 11311
-No premine. 
+The default ports: Connection 11310, and RPC 11311 
 
 POW Details.
 
@@ -21,17 +18,16 @@ Difficulty retargets on every block.
 
 POS Details.
 
-POS activated on block 420,000 - Hard fork.
-
+POS activated
 POSV stake once each month to earn highest possible rewards incentivises running full nodes to increase POS security. Coin age gradually slows after 1 month with an aging half life of 90 days.
 
 Personal Investment Rate or PIR is a special reward algorithm unique for a PoS coin. The APR Stake reward increases in line with the value of the coins staked on a sliding scale.In other words the more FlapX you own and stake the bigger the reward you earn. The last 3 years FlapX had 3 different levels of PIR and it reached the last and final level end 2016.
-The reward rates now are as followed: 0-999N --> 2%
-                                      1000-9999N --> 4%
-                                      10000-99999N --> 6%
-                                      100000-999999N --> 7%
-                                      1000000-9999999N --> 8%
-                                      10000000N->>> --> 10%
+The reward rates now are as followed: 0-999N --> #%
+                                      1000-9999N --> #%
+                                      10000-99999N --> #%
+                                      100000-999999N --> #%
+                                      1000000-9999999N --> #%
+                                      10000000N->>> --> #%
 
 120 seconds block time POS
 1 hour minimum age for staking.  30 days max age.
@@ -67,3 +63,4 @@ Issues with no commits will be given a similar warning, and closed after
 15 days from their last activity. Issues closed in this manner will be 
 labeled 'stale'. 
 # FlapX
+this will be edited shortly 
