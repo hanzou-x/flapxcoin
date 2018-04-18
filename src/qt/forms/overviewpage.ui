@@ -4774,7 +4774,7 @@
             <enum>QFrame::Plain</enum>
            </property>
            <layout class="QGridLayout" name="gridLayout_8">
-            <item row="2" column="0">
+            <item row="1" column="0">
              <spacer name="horizontalSpacer_3">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -4787,90 +4787,7 @@
               </property>
              </spacer>
             </item>
-            <item row="2" column="2">
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>21</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="3" column="4">
-             <spacer name="horizontalSpacer_4">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>21</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="4" column="0" colspan="3">
-             <spacer name="horizontalSpacer_6">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>39</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="4" column="3" colspan="2">
-             <widget class="QLabel" name="label_22">
-              <property name="maximumSize">
-               <size>
-                <width>30</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background:transparent;</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="pixmap">
-               <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
-              </property>
-              <property name="scaledContents">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="label_25">
-              <property name="maximumSize">
-               <size>
-                <width>30</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background:transparent;</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="pixmap">
-               <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
-              </property>
-              <property name="scaledContents">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
+            <item row="1" column="1">
              <widget class="QLabel" name="label_24">
               <property name="maximumSize">
                <size>
@@ -4885,6 +4802,89 @@
                <string/>
               </property>
               <property name="pixmap">
+               <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FBT.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>21</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="2">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>21</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="3" column="0" colspan="2">
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>39</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="label_22">
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background:transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/fb1.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_23">
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background:transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
                <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
               </property>
               <property name="scaledContents">
@@ -4892,8 +4892,8 @@
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
-             <widget class="QLabel" name="label_23">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_25">
               <property name="maximumSize">
                <size>
                 <width>30</width>
@@ -5298,7 +5298,7 @@
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
+               <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FBR.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -5342,7 +5342,7 @@
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FB.png</pixmap>
+               <pixmap resource="../bitcoin.qrc">:/images/res/images/FlapXcoin/FlapX Art/FBB.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>

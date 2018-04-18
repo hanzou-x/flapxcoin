@@ -125,6 +125,7 @@
         <file>res/images/FlapXcoin/Crypto Links/TradeSat.png</file>
         <file>res/images/FlapXcoin/Crypto Links/Topia.png</file>
         <file>res/images/FlapXcoin/Crypto Links/Fiatleak.png</file>
+        <file>res/images/FlapXcoin/FlapX Art/FBR.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
