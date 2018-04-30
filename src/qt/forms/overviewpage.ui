@@ -26,7 +26,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image:url(:/images/res/images/FlapXcoin/FlapX Art/space.png);</string>
+   <string notr="true">background:transparent;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_5">
    <property name="leftMargin">
@@ -59,7 +59,7 @@
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:transparent;</string>
+      <string notr="true">background-image:url(:/images/res/images/FlapXcoin/FlapX Art/space.png);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -2695,6 +2695,9 @@
            </colorrole>
           </disabled>
          </palette>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:transparent;</string>
         </property>
         <property name="title">
          <string>The Flapining POW</string>

@@ -96,7 +96,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
     resize(850, 500);
     setWindowTitle(tr("FlapX") + " - " + tr("Wallet"));
-qApp->setStyleSheet("QMainWindow { background-image:url(:/images/res/images/FlapXcoin/FlapX Art/space.png);}");
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));

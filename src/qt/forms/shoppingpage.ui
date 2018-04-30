@@ -35,7 +35,7 @@
    <string>Address Book</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-image:url(:/images/res/images/FlapXcoin/FlapX Art/space.png);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_11">
    <item row="1" column="0">
@@ -7636,7 +7636,7 @@
             <x>0</x>
             <y>0</y>
             <width>832</width>
-            <height>569</height>
+            <height>571</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -9489,7 +9489,7 @@
             <x>0</x>
             <y>0</y>
             <width>832</width>
-            <height>569</height>
+            <height>571</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -10744,7 +10744,7 @@
             <x>0</x>
             <y>0</y>
             <width>832</width>
-            <height>569</height>
+            <height>571</height>
            </rect>
           </property>
           <property name="styleSheet">
