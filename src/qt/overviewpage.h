@@ -97,6 +97,8 @@ private slots:
     void updateMyWeight();
     void on_startButton_clicked();
 
+    void on_unlockWalletActionNew_clicked();
+
 signals:
     void stakeForCharitySignal();
 };
