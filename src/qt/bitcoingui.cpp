@@ -95,7 +95,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
 
     resize(850, 500);
-    setWindowTitle(tr("FlapX") + " - " + tr("X")+" - " + tr("Coin"));
+    setWindowTitle(tr("FlapXCoin") + " - " + tr("Rev")+" - " + tr("1.1"));
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
