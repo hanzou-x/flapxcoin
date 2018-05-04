@@ -211,24 +211,24 @@ void OverviewPage::updateMyWeight()
         unsigned nEstimateTime = nTargetSpacing * 2 * nNetworkWeight / nWeight;
 
         QString text;
-        if (nEstimateTime < 0)
+        if (nEstimateTime < 60)
         {
-            text = tr("%n second(s)", "", nEstimateTime);
+           // text = tr("%n second(s)", "", nEstimateTime);
         }
         else if (nEstimateTime < 60*60)
         {
-            text = tr("%n minute(s)", "", nEstimateTime/60);
+           // text = tr("%n minute(s)", "", nEstimateTime/60);
         }
         else if (nEstimateTime < 24*60*60)
         {
-            text = tr("%n hour(s)", "", nEstimateTime/(60*60));
+           // text = tr("%n hour(s)", "", nEstimateTime/(60*60));
         }
         else
         {
-            text = tr("%n day(s)", "", nEstimateTime/(60*60*24));
+           // text = tr("%n day(s)", "", nEstimateTime/(60*60*24));
         }
 
-        ui->labelMyWeight->setText(tr("Staking.<br>Your weight is %1<br>Network weight is %2<br>Expected time to earn reward is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
+        ui->labelMyWeight->setText(tr("Staking.<br>Your weight is %1<br>Network weight is %2").arg(nWeight).arg(nNetworkWeight).arg(text));
     }
     else
     {
