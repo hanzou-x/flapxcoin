@@ -486,7 +486,7 @@ void ShoppingPage::on_pushButton_131_clicked()
 }
 void ShoppingPage::on_pushButton_132_clicked()
 {
-    QString link="https://discord.gg/Hfx6Raz";
+    QString link="https://discord.gg/F2wmDg7";
     QDesktopServices::openUrl(QUrl(link));
 }
 void ShoppingPage::on_pushButton_133_clicked()
@@ -538,9 +538,10 @@ void ShoppingPage::on_pushButton_145_clicked()
     QDesktopServices::openUrl(QUrl(link));
 }
 //communities
+//NET
 void ShoppingPage::on_pushButton_201_clicked()
 {
-    QString link="http://flapx.io/";
+    QString link="http://netcoin.io/";
     QDesktopServices::openUrl(QUrl(link));
 }
 void ShoppingPage::on_pushButton_202_clicked()
@@ -550,7 +551,7 @@ void ShoppingPage::on_pushButton_202_clicked()
 }
 void ShoppingPage::on_pushButton_203_clicked()
 {
-    QString link="https://www.crypto-city.com/index.php/net-flapx/";
+    QString link="https://www.crypto-city.com/index.php/net-netcoin/";
     QDesktopServices::openUrl(QUrl(link));
 }
 //FLAPX
@@ -598,7 +599,7 @@ void ShoppingPage::on_pushButton_232_clicked()
 }
 void ShoppingPage::on_pushButton_233_clicked()
 {
-    QString link="https://youtu.be/E1LFIzTubkw";
+    QString link="https://bitcointalk.org/index.php?topic=2429913.0";
     QDesktopServices::openUrl(QUrl(link));
 }
 //HYP
@@ -630,7 +631,7 @@ void ShoppingPage::on_pushButton_252_clicked()
 }
 void ShoppingPage::on_pushButton_253_clicked()
 {
-    QString link="https://www.youtube.com/watch?v=pXYWDtXbBB0";
+    QString link="https://bitcointalk.org/index.php?topic=2249640";
     QDesktopServices::openUrl(QUrl(link));
 }
 //Xcoin

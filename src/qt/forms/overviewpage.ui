@@ -203,6 +203,11 @@
           </disabled>
          </palette>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
         <property name="autoFillBackground">
          <bool>false</bool>
         </property>
@@ -210,7 +215,7 @@
          <string notr="true">background:transparent;</string>
         </property>
         <property name="title">
-         <string>Wallet Breakdown</string>
+         <string>FlapXCoin</string>
         </property>
         <property name="flat">
          <bool>false</bool>
@@ -2135,7 +2140,7 @@
            <property name="maximumSize">
             <size>
              <width>100</width>
-             <height>25</height>
+             <height>30</height>
             </size>
            </property>
            <property name="palette">
@@ -2374,7 +2379,7 @@
            <property name="minimumSize">
             <size>
              <width>100</width>
-             <height>25</height>
+             <height>30</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -2700,17 +2705,22 @@
           </disabled>
          </palette>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background:transparent;</string>
         </property>
         <property name="title">
-         <string>The Flapining POW</string>
+         <string>Flapping POW</string>
         </property>
         <property name="checkable">
          <bool>false</bool>
         </property>
         <layout class="QGridLayout" name="gridLayout_11">
-         <item row="0" column="0">
+         <item row="2" column="0">
           <layout class="QGridLayout" name="gridLayout_7">
            <item row="0" column="0">
             <layout class="QGridLayout" name="gridLayout_6">
@@ -2722,9 +2732,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -2760,9 +2770,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -2853,9 +2863,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -2891,9 +2901,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -3115,9 +3125,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -3153,9 +3163,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -3371,9 +3381,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -3409,9 +3419,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -3877,9 +3887,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -3915,9 +3925,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -4008,9 +4018,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>237</red>
+                     <green>212</green>
+                     <blue>0</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -4046,9 +4056,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>237</red>
+                     <green>212</green>
+                     <blue>0</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -4389,9 +4399,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -4427,9 +4437,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -4645,9 +4655,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -4683,9 +4693,9 @@
                   <colorrole role="WindowText">
                    <brush brushstyle="SolidPattern">
                     <color alpha="255">
-                     <red>255</red>
-                     <green>255</green>
-                     <blue>255</blue>
+                     <red>20</red>
+                     <green>181</green>
+                     <blue>225</blue>
                     </color>
                    </brush>
                   </colorrole>
@@ -4766,7 +4776,7 @@
            </item>
           </layout>
          </item>
-         <item row="0" column="1">
+         <item row="2" column="1">
           <widget class="QFrame" name="frame_4">
            <property name="minimumSize">
             <size>
@@ -4924,7 +4934,7 @@
            </layout>
           </widget>
          </item>
-         <item row="0" column="2">
+         <item row="2" column="2">
           <spacer name="horizontalSpacer_5">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -4937,15 +4947,18 @@
            </property>
           </spacer>
          </item>
-         <item row="1" column="1">
-          <spacer name="horizontalSpacer">
+         <item row="0" column="0">
+          <spacer name="verticalSpacer_2">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>95</width>
-             <height>20</height>
+             <width>20</width>
+             <height>15</height>
             </size>
            </property>
           </spacer>
@@ -5268,6 +5281,11 @@
           </disabled>
          </palette>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background:transparent;</string>
         </property>
@@ -5275,7 +5293,7 @@
          <string>Nesting POS </string>
         </property>
         <layout class="QGridLayout" name="gridLayout_10">
-         <item row="2" column="0">
+         <item row="3" column="0">
           <widget class="QFrame" name="frame_2">
            <property name="maximumSize">
             <size>
@@ -5416,7 +5434,7 @@
            </layout>
           </widget>
          </item>
-         <item row="1" column="0">
+         <item row="2" column="0">
           <widget class="QLabel" name="labelMyWeight">
            <property name="minimumSize">
             <size>
@@ -5852,6 +5870,19 @@
             <string/>
            </property>
           </widget>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
