@@ -36,6 +36,12 @@
 
 #include <stdint.h>
 #include <inttypes.h>
+//if it still fails with STDC_FORMAT_MACROS try to whing it...
+#ifndef PRId64
+#define PRId64  "lld"
+#define PRIu64  "llu"
+#define PRIx64  "llx"
+#endif
 
 static const int64_t COIN = 100000000;
 static const int64_t CENT = 1000000;
