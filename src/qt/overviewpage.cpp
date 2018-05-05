@@ -30,7 +30,7 @@
 #include <QMenu>
 
 #define DECORATION_SIZE 64
-#define NUM_ITEMS 4
+#define NUM_ITEMS 5
 
 using namespace json_spirit;
 extern CWallet* pwalletMain;
