@@ -562,7 +562,7 @@ void ShoppingPage::on_pushButton_211_clicked()
 }
 void ShoppingPage::on_pushButton_212_clicked()
 {
-    QString link="https://discord.gg/Hfx6Raz";
+    QString link="https://discord.gg/UZK4wVU";
     QDesktopServices::openUrl(QUrl(link));
 }
 void ShoppingPage::on_pushButton_213_clicked()

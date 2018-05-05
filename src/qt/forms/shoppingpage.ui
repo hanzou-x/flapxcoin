@@ -51,8 +51,8 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>580</width>
-       <height>0</height>
+       <width>120</width>
+       <height>140</height>
       </size>
      </property>
      <property name="maximumSize">
@@ -150,7 +150,7 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <property name="elideMode">
       <enum>Qt::ElideNone</enum>
@@ -177,7 +177,7 @@
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>150</height>
+           <height>100</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -196,12 +196,25 @@
           <number>0</number>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
-          <item row="0" column="0">
+          <item row="0" column="6">
+           <spacer name="horizontalSpacer_23">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1">
            <widget class="QPushButton" name="pushButton_111">
             <property name="minimumSize">
              <size>
               <width>250</width>
-              <height>150</height>
+              <height>125</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -311,17 +324,17 @@
             <property name="iconSize">
              <size>
               <width>225</width>
-              <height>200</height>
+              <height>125</height>
              </size>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="0" column="3">
            <widget class="QPushButton" name="pushButton_112">
             <property name="minimumSize">
              <size>
               <width>250</width>
-              <height>150</height>
+              <height>125</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -431,17 +444,17 @@
             <property name="iconSize">
              <size>
               <width>225</width>
-              <height>200</height>
+              <height>125</height>
              </size>
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
+          <item row="0" column="5">
            <widget class="QPushButton" name="pushButton_113">
             <property name="minimumSize">
              <size>
               <width>250</width>
-              <height>150</height>
+              <height>125</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -551,12 +564,12 @@
             <property name="iconSize">
              <size>
               <width>225</width>
-              <height>200</height>
+              <height>125</height>
              </size>
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="1" column="1">
            <spacer name="verticalSpacer_2">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -569,7 +582,7 @@
             </property>
            </spacer>
           </item>
-          <item row="1" column="1">
+          <item row="1" column="3">
            <spacer name="verticalSpacer_3">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -582,7 +595,7 @@
             </property>
            </spacer>
           </item>
-          <item row="1" column="2">
+          <item row="1" column="5">
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -591,6 +604,45 @@
              <size>
               <width>20</width>
               <height>6</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0">
+           <spacer name="horizontalSpacer_22">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_36">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="4">
+           <spacer name="horizontalSpacer_37">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
              </size>
             </property>
            </spacer>
@@ -622,7 +674,7 @@
           <number>-1</number>
          </property>
          <layout class="QGridLayout" name="gridLayout_5">
-          <item row="0" column="1">
+          <item row="0" column="3">
            <widget class="QPushButton" name="pushButton_122">
             <property name="minimumSize">
              <size>
@@ -740,12 +792,12 @@
             <property name="iconSize">
              <size>
               <width>150</width>
-              <height>129</height>
+              <height>122</height>
              </size>
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
+          <item row="0" column="1">
            <widget class="QPushButton" name="pushButton_121">
             <property name="minimumSize">
              <size>
@@ -865,7 +917,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="1" column="3">
            <spacer name="verticalSpacer_5">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -878,7 +930,7 @@
             </property>
            </spacer>
           </item>
-          <item row="1" column="0">
+          <item row="1" column="1">
            <spacer name="verticalSpacer_4">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -891,7 +943,7 @@
             </property>
            </spacer>
           </item>
-          <item row="1" column="3">
+          <item row="1" column="7">
            <spacer name="verticalSpacer_7">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -904,7 +956,7 @@
             </property>
            </spacer>
           </item>
-          <item row="0" column="3">
+          <item row="0" column="7">
            <widget class="QPushButton" name="pushButton_124">
             <property name="minimumSize">
              <size>
@@ -1019,12 +1071,12 @@
             <property name="iconSize">
              <size>
               <width>225</width>
-              <height>200</height>
+              <height>125</height>
              </size>
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
+          <item row="0" column="5">
            <widget class="QPushButton" name="pushButton_123">
             <property name="minimumSize">
              <size>
@@ -1142,10 +1194,75 @@
             <property name="iconSize">
              <size>
               <width>150</width>
-              <height>127</height>
+              <height>120</height>
              </size>
             </property>
            </widget>
+          </item>
+          <item row="0" column="4">
+           <spacer name="horizontalSpacer_33">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0">
+           <spacer name="horizontalSpacer_24">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="8">
+           <spacer name="horizontalSpacer_25">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_34">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="6">
+           <spacer name="horizontalSpacer_35">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -1181,7 +1298,7 @@
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>140</height>
+           <height>100</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -1200,7 +1317,20 @@
           <number>-1</number>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="8">
+          <item row="0" column="0">
+           <spacer name="horizontalSpacer_26">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="12">
            <widget class="QPushButton" name="pushButton_135">
             <property name="minimumSize">
              <size>
@@ -1326,7 +1456,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="9">
+          <item row="0" column="14">
            <widget class="QPushButton" name="pushButton_136">
             <property name="minimumSize">
              <size>
@@ -1452,7 +1582,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
+          <item row="0" column="1">
            <widget class="QPushButton" name="pushButton_131">
             <property name="minimumSize">
              <size>
@@ -1575,7 +1705,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="0" column="3">
            <widget class="QPushButton" name="pushButton_132">
             <property name="minimumSize">
              <size>
@@ -1698,7 +1828,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="3">
+          <item row="0" column="7">
            <widget class="QPushButton" name="pushButton_134">
             <property name="minimumSize">
              <size>
@@ -1821,7 +1951,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
+          <item row="0" column="5">
            <widget class="QPushButton" name="pushButton_133">
             <property name="minimumSize">
              <size>
@@ -1944,6 +2074,84 @@
             </property>
            </widget>
           </item>
+          <item row="0" column="15">
+           <spacer name="horizontalSpacer_27">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="4">
+           <spacer name="horizontalSpacer_30">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_29">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="8">
+           <spacer name="horizontalSpacer_31">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="6">
+           <spacer name="horizontalSpacer_28">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="13">
+           <spacer name="horizontalSpacer_32">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
          </layout>
         </widget>
        </item>
@@ -2024,7 +2232,7 @@
             <property name="minimumSize">
              <size>
               <width>250</width>
-              <height>45</height>
+              <height>50</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -2902,8 +3110,8 @@
         <widget class="QFrame" name="frame_20">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -2933,7 +3141,7 @@
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>25</height>
+              <height>20</height>
              </size>
             </property>
             <property name="palette">
@@ -3292,8 +3500,8 @@
         <widget class="QFrame" name="frame_21">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -3323,7 +3531,7 @@
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>25</height>
+              <height>20</height>
              </size>
             </property>
             <property name="palette">
@@ -3682,8 +3890,8 @@
         <widget class="QFrame" name="frame_22">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -3713,7 +3921,7 @@
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>25</height>
+              <height>20</height>
              </size>
             </property>
             <property name="palette">
@@ -4072,8 +4280,8 @@
         <widget class="QFrame" name="frame_23">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -4102,8 +4310,8 @@
            <widget class="QPushButton" name="pushButton_233">
             <property name="maximumSize">
              <size>
-              <width>120</width>
-              <height>25</height>
+              <width>101</width>
+              <height>21</height>
              </size>
             </property>
             <property name="palette">
@@ -4210,7 +4418,7 @@
             <property name="iconSize">
              <size>
               <width>100</width>
-              <height>30</height>
+              <height>23</height>
              </size>
             </property>
            </widget>
@@ -4462,8 +4670,8 @@
         <widget class="QFrame" name="frame_24">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -4493,7 +4701,7 @@
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>25</height>
+              <height>20</height>
              </size>
             </property>
             <property name="palette">
@@ -4852,8 +5060,8 @@
         <widget class="QFrame" name="frame_30">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -4883,7 +5091,7 @@
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>25</height>
+              <height>20</height>
              </size>
             </property>
             <property name="palette">
@@ -5242,8 +5450,8 @@
         <widget class="QFrame" name="frame_25">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -5272,8 +5480,8 @@
            <widget class="QPushButton" name="pushButton_253">
             <property name="maximumSize">
              <size>
-              <width>120</width>
-              <height>25</height>
+              <width>101</width>
+              <height>21</height>
              </size>
             </property>
             <property name="palette">
@@ -5380,7 +5588,7 @@
             <property name="iconSize">
              <size>
               <width>100</width>
-              <height>30</height>
+              <height>23</height>
              </size>
             </property>
            </widget>
@@ -5632,8 +5840,8 @@
         <widget class="QFrame" name="frame_26">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -5663,7 +5871,7 @@
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>25</height>
+              <height>20</height>
              </size>
             </property>
             <property name="palette">
@@ -6022,8 +6230,8 @@
         <widget class="QFrame" name="frame_27">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -6170,7 +6378,7 @@
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>25</height>
+              <height>20</height>
              </size>
             </property>
             <property name="palette">
@@ -6412,8 +6620,8 @@
         <widget class="QFrame" name="frame_28">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -6446,7 +6654,7 @@
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>25</height>
+              <height>20</height>
              </size>
             </property>
             <property name="palette">
@@ -6805,8 +7013,8 @@
         <widget class="QFrame" name="frame_29">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -6835,8 +7043,8 @@
            <widget class="QPushButton" name="pushButton_293">
             <property name="maximumSize">
              <size>
-              <width>120</width>
-              <height>25</height>
+              <width>101</width>
+              <height>21</height>
              </size>
             </property>
             <property name="palette">
@@ -6943,7 +7151,7 @@
             <property name="iconSize">
              <size>
               <width>100</width>
-              <height>30</height>
+              <height>23</height>
              </size>
             </property>
            </widget>
@@ -7195,8 +7403,8 @@
         <widget class="QFrame" name="frame_31">
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>140</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -7225,8 +7433,8 @@
            <widget class="QPushButton" name="pushButton_313">
             <property name="maximumSize">
              <size>
-              <width>120</width>
-              <height>25</height>
+              <width>101</width>
+              <height>21</height>
              </size>
             </property>
             <property name="palette">
@@ -7333,7 +7541,7 @@
             <property name="iconSize">
              <size>
               <width>100</width>
-              <height>30</height>
+              <height>23</height>
              </size>
             </property>
            </widget>
@@ -9579,6 +9787,9 @@
              <layout class="QGridLayout" name="gridLayout">
               <item row="0" column="3">
                <widget class="QFrame" name="frame_60">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -9774,6 +9985,9 @@
               </item>
               <item row="2" column="1">
                <widget class="QFrame" name="frame_64">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -9943,6 +10157,9 @@
               </item>
               <item row="0" column="1">
                <widget class="QFrame" name="frame_61">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -10099,6 +10316,9 @@
               </item>
               <item row="2" column="3">
                <widget class="QFrame" name="frame_63">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -10268,6 +10488,9 @@
               </item>
               <item row="2" column="5">
                <widget class="QFrame" name="frame_59">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -10298,6 +10521,9 @@
                 <layout class="QGridLayout" name="gridLayout_12">
                  <item row="0" column="0" colspan="2">
                   <widget class="QPushButton" name="pushButton_181">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>180</width>
@@ -10424,6 +10650,9 @@
               </item>
               <item row="0" column="5">
                <widget class="QFrame" name="frame_62">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
