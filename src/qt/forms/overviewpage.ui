@@ -257,7 +257,7 @@
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background:transparent;border:0;setFlat:true;</string>
+         <string notr="true">background:transparent;border:0;</string>
         </property>
         <property name="title">
          <string>FlapXCoin Mission Contol</string>
@@ -1985,7 +1985,7 @@
               </property>
               <property name="maximumSize">
                <size>
-                <width>100</width>
+                <width>200</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -3025,7 +3025,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background:transparent;border:0;setFlat:true;</string>
+         <string notr="true">background:transparent;border:0;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -5531,13 +5531,13 @@
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background:transparent;border:0;setFlat:true;</string>
+         <string notr="true">background:transparent;border:0;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
         </property>
         <property name="flat">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="checkable">
          <bool>false</bool>

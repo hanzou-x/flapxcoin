@@ -213,7 +213,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
-
+    syncIconMovie2 = new QMovie(":/movies/update_spinner", "mng" , this);
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
@@ -1070,8 +1070,8 @@ void BitcoinGUI::updateStakingIcon()
         {
             text = tr("%n day(s)", "", nEstimateTime/(60*60*24));
         }
-
-        labelStakingIcon->setPixmap(QIcon(":/icons/res/icons/staking_on.png").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelStakingIcon->setMovie(syncIconMovie);
+            syncIconMovie->start();
         labelStakingIcon->setToolTip(tr("Staking.<br>Your weight: %1<br>Network weight: %2<br>Expected time to earn reward: %3").arg(nWeight).arg(nNetworkWeight).arg(text));
 
     }

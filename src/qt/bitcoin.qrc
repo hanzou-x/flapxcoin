@@ -99,7 +99,7 @@
         <file>res/images/FlapXcoin/Social/Discord2.png</file>
         <file>res/images/FlapXcoin/Social/btct2.png</file>
         <file>res/images/FlapXcoin/Community/Maza.png</file>
-        <file>res/images/FlapXcoin/Social/cc.png</file>
+        <file>res/images/FlapXcoin/Social/Ccity.png</file>
         <file>res/images/FlapXcoin/Social/play.png</file>
         <file>res/images/FlapXcoin/FlapXFM/FlapCT.png</file>
         <file>res/images/FlapXcoin/FlapXFM/FlapxFTH.png</file>
@@ -128,6 +128,8 @@
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
+        <file>res/movies/staking.mng</file>
+        <file>res/movies/update_spinner2.mng</file>
     </qresource>
     <qresource prefix="/translations">
         <file alias="en">locale/bitcoin_en.qm</file>
