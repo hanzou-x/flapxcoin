@@ -217,6 +217,8 @@ private slots:
 
     void on_pushButton_515_clicked();
 
+    void on_pushButton_600_clicked();
+
 
 
 

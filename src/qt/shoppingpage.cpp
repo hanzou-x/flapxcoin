@@ -647,7 +647,7 @@ void ShoppingPage::on_pushButton_262_clicked()
 }
 void ShoppingPage::on_pushButton_263_clicked()
 {
-    QString link="http://tacospin.com/";
+    QString link="https://bitcointalk.org/index.php?topic=969896.0";
     QDesktopServices::openUrl(QUrl(link));
 }
 //STC
@@ -695,7 +695,7 @@ void ShoppingPage::on_pushButton_292_clicked()
 }
 void ShoppingPage::on_pushButton_293_clicked()
 {
-    QString link="https://youtu.be/zZ5gCGJorKk?t=1";
+    QString link="https://bitcointalk.org/index.php?topic=2768822.0;all";
     QDesktopServices::openUrl(QUrl(link));
 }
 //GDC
@@ -815,6 +815,11 @@ void ShoppingPage::on_pushButton_514_clicked()
 void ShoppingPage::on_pushButton_515_clicked()
 {
     QString link="http://cryptochainer.com/dir/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+void ShoppingPage::on_pushButton_600_clicked()
+{
+    QString link="http://thecoinbuilders.com/";
     QDesktopServices::openUrl(QUrl(link));
 }
 
