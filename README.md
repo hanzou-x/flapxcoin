@@ -1,6 +1,10 @@
 FLAPXZERO DAY
 ========
 
+PUNCH LIST 
+
+1.TX page right click explorer link 404
+
 
 FlapX (FLAPX) - Litecoin / PeerCoin Hybrid POW/POSV hybrid with Personal Investment Rate
 
