@@ -3,7 +3,12 @@ FLAPXZERO DAY
 
 PUNCH LIST 
 
-1.TX page right click explorer link 404
+>TX page right click explorer link 404
+>Change RPC Port
+>Another round windows debug (sizing issues)
+>flip unlock icon and make new mining a ctive icon 
+>tool tip ghosts everywhere
+>
 
 
 FlapX (FLAPX) - Litecoin / PeerCoin Hybrid POW/POSV hybrid with Personal Investment Rate
