@@ -1067,22 +1067,6 @@ void MapPort(bool)
 }
 #endif
 
-// DNS seeds
-// Each pair gives a source name and a seed name.
-// The first name is used as information source for addrman.
-// The second name should resolve to a list of seed addresses.
-static const char *strDNSSeed[][2] = {
-                {"SEED-Node", "167.99.6.3"},
-                {"SEED-Node", "188.166.216.243"},
-                {"SEED-Node", "139.59.68.214"},
-                {"SEED-Node", "138.68.6.192"},
-                {"SEED-Node", "128.199.35.197"},
-                {"SEED-Node", "167.99.193.143"},
-                {"SEED-Node", "167.99.196.247"},
-                {"SEED-Node", "165.227.210.169"},
-
-
-};
 void ThreadDNSAddressSeed()
 {
     // goal: only query DNS seeds if address need is acute
