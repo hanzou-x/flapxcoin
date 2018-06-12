@@ -80,9 +80,24 @@ public:
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0xf30d6d37c276519974c14eae52dac5538b2bdc358f2e4a3b48a14b201eb48fed"));
         assert(genesis.hashMerkleRoot == uint256("0x9e17be6aefbffc74cf4deab73f93bd050e696008fe28c56de80520a22b05fafb"));
-
+///removed seednodes as un reachable left in place incase they are/become live again
+/*
         vSeeds.push_back(CDNSSeedData("seed", "seed.flapx.mycryptocoins.net"));
         vSeeds.push_back(CDNSSeedData("seednodes", "seednodes.flapx.mycryptocoins.net"));
+*/
+///new seednodes should improve initial connectivity and sync	    
+	vSeeds.push_back(CDNSSeedData( "SEED-Node1", "167.99.6.3"));
+        vSeeds.push_back(CDNSSeedData("SEED-Node2", "188.166.216.243"));
+        vSeeds.push_back(CDNSSeedData("SEED-Node3", "138.68.6.192"));
+        vSeeds.push_back(CDNSSeedData("SEED-Node4", "128.199.35.197"));
+        vSeeds.push_back(CDNSSeedData("SEED-Node5", "167.99.193.143"));
+        vSeeds.push_back(CDNSSeedData("SEED-Node6", "167.99.196.247"));
+        vSeeds.push_back(CDNSSeedData({"SEED-Node7", "165.227.210.169"));
+        vSeeds.push_back(CDNSSeedData("LAB-Node", "204.48.22.169"));
+        vSeeds.push_back(CDNSSeedData("LAB-Node", "159.203.92.66"));
+        vSeeds.push_back(CDNSSeedData("LAB-Node", "138.68.251.37"));
+        vSeeds.push_back(CDNSSeedData("LAB-Node", "138.68.143.108"));
+	
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75); //X
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 80); //Z
