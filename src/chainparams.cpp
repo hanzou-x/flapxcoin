@@ -86,13 +86,13 @@ public:
         vSeeds.push_back(CDNSSeedData("seednodes", "seednodes.flapx.mycryptocoins.net"));
 */
 ///new seednodes should improve initial connectivity and sync	    
-	vSeeds.push_back(CDNSSeedData( "SEED-Node1", "167.99.6.3"));
+	vSeeds.push_back(CDNSSeedData("SEED-Node1", "167.99.6.3"));
         vSeeds.push_back(CDNSSeedData("SEED-Node2", "188.166.216.243"));
         vSeeds.push_back(CDNSSeedData("SEED-Node3", "138.68.6.192"));
         vSeeds.push_back(CDNSSeedData("SEED-Node4", "128.199.35.197"));
         vSeeds.push_back(CDNSSeedData("SEED-Node5", "167.99.193.143"));
         vSeeds.push_back(CDNSSeedData("SEED-Node6", "167.99.196.247"));
-        vSeeds.push_back(CDNSSeedData({"SEED-Node7", "165.227.210.169"));
+        vSeeds.push_back(CDNSSeedData("SEED-Node7", "165.227.210.169"));
         vSeeds.push_back(CDNSSeedData("LAB-Node", "204.48.22.169"));
         vSeeds.push_back(CDNSSeedData("LAB-Node", "159.203.92.66"));
         vSeeds.push_back(CDNSSeedData("LAB-Node", "138.68.251.37"));
