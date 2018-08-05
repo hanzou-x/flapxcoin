@@ -127,5 +127,6 @@
     <qresource prefix="/"/>
     <qresource prefix="/qt/themes">
         <file>themes/flapxcoin/b1.png</file>
+        <file>themes/flapxcoin/o1.png</file>
     </qresource>
 </RCC>
