@@ -63,22 +63,16 @@
         <file>res/images/FlapXcoin/FlapX Art/P3.png</file>
         <file>res/images/FlapXcoin/FlapX Art/space.png</file>
         <file>res/images/FlapXcoin/Social/Discord.png</file>
-        <file>res/images/FlapXcoin/Community/STC.png</file>
         <file>res/images/FlapXcoin/Community/WW.png</file>
         <file>res/images/FlapXcoin/Community/NET.png</file>
         <file>res/images/FlapXcoin/FlapX Art/N2.png</file>
-        <file>res/images/FlapXcoin/Community/GSave.png</file>
         <file>res/images/FlapXcoin/Community/Elite.png</file>
-        <file>res/images/FlapXcoin/Community/Xcoin.png</file>
         <file>res/images/FlapXcoin/Community/SAT2.png</file>
         <file>res/images/FlapXcoin/Community/HYP.png</file>
         <file>res/images/FlapXcoin/Social/Cc.png</file>
         <file>res/images/FlapXcoin/FlapXCoin/Pipe.png</file>
         <file>res/images/FlapXcoin/Social/Panic.png</file>
         <file>res/images/FlapXcoin/Social/btct.png</file>
-        <file>res/images/FlapXcoin/Community/RBL.png</file>
-        <file>res/images/FlapXcoin/Development/Jio.png</file>
-        <file>res/images/FlapXcoin/Development/P4C.png</file>
         <file>res/images/FlapXcoin/Community/FlapX.png</file>
         <file>res/images/FlapXcoin/FlapX Art/space2.png</file>
         <file>res/images/FlapXcoin/FlapX Art/DrNET.png</file>
@@ -87,9 +81,6 @@
         <file>res/images/FlapXcoin/FlapXCoin/Pool.png</file>
         <file>res/images/FlapXcoin/Community/GDC.png</file>
         <file>res/images/FlapXcoin/FlapX Art/Logo.png</file>
-        <file>res/images/FlapXcoin/Development/CB.png</file>
-        <file>res/images/FlapXcoin/Development/SAT3.png</file>
-        <file>res/images/FlapXcoin/Development/STC.png</file>
         <file>res/images/FlapXcoin/FlapXCoin/Crawlie.png</file>
         <file>res/images/FlapXcoin/FlapXCoin/Home.png</file>
         <file>res/images/FlapXcoin/FlapXCoin/jio.png</file>
@@ -114,9 +105,6 @@
         <file>res/images/FlapXcoin/FlapXFM/FXFM.png</file>
         <file>res/images/FlapXcoin/Crypto Links/MRR.png</file>
         <file>res/images/FlapXcoin/Crypto Links/CCA.png</file>
-        <file>res/images/FlapXcoin/Development/CS.png</file>
-        <file>res/images/FlapXcoin/Development/cpa.png</file>
-        <file>res/images/FlapXcoin/Development/LC.png</file>
         <file>res/images/FlapXcoin/Crypto Links/CryptoC.png</file>
         <file>res/images/FlapXcoin/Crypto Links/MOC.png</file>
         <file>res/images/FlapXcoin/Crypto Links/LCW.png</file>
@@ -126,9 +114,6 @@
         <file>res/images/FlapXcoin/Crypto Links/Fiatleak.png</file>
         <file>res/images/FlapXcoin/FlapX Art/FBR.png</file>
         <file>res/images/FlapXcoin/FlapX Art/FBS.png</file>
-        <file>res/images/FlapXcoin/Development/SAT34.png</file>
-        <file>res/images/FlapXcoin/Development/SAT33.png</file>
-        <file>res/images/FlapXcoin/Development/SAT32.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
@@ -140,4 +125,7 @@
     </qresource>
     <qresource prefix="/toolTip"/>
     <qresource prefix="/"/>
+    <qresource prefix="/qt/themes">
+        <file>themes/flapxcoin/b1.png</file>
+    </qresource>
 </RCC>

@@ -446,12 +446,12 @@ void ShoppingPage::setModel(ClientModel *model)
 //FlapXcoin
 void ShoppingPage::on_pushButton_111_clicked()
 {
-    QString link="https://sites.google.com/view/flapxcoin/landing-pad";
+    QString link="https://flapxcoin.com";
     QDesktopServices::openUrl(QUrl(link));
 }
 void ShoppingPage::on_pushButton_112_clicked()
 {
-    QString link="https://sites.google.com/view/flapxcoin/explorers";
+    QString link="www.flapxcoin.info";
     QDesktopServices::openUrl(QUrl(link));
 }
 void ShoppingPage::on_pushButton_113_clicked()
@@ -459,11 +459,11 @@ void ShoppingPage::on_pushButton_113_clicked()
     QString link="https://sites.google.com/view/flapxcoin/pools";
     QDesktopServices::openUrl(QUrl(link));
 }
-void ShoppingPage::on_pushButton_121_clicked()
-{
-    QString link="https://vote.jalapen.io";
-    QDesktopServices::openUrl(QUrl(link));
-}
+//void ShoppingPage::on_pushButton_121_clicked()
+//{
+//    QString link="https://vote.jalapen.io";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
 void ShoppingPage::on_pushButton_122_clicked()
 {
     QString link="https://sites.google.com/view/flapxcoin/bots/crawlie";
@@ -474,11 +474,11 @@ void ShoppingPage::on_pushButton_123_clicked()
     QString link="https://sites.google.com/view/flapxcoin/bots/tipbot";
     QDesktopServices::openUrl(QUrl(link));
 }
-void ShoppingPage::on_pushButton_124_clicked()
-{
-    QString link="https://playforcrypto.com/index.php?action=register&referrer=ukmayhem";
-    QDesktopServices::openUrl(QUrl(link));
-}
+//void ShoppingPage::on_pushButton_124_clicked()
+//{
+//    QString link="https://playforcrypto.com/index.php?action=register&referrer=ukmayhem";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
 void ShoppingPage::on_pushButton_131_clicked()
 {
     QString link="https://www.crypto-city.com/index.php/flapx/wall";
@@ -587,21 +587,21 @@ void ShoppingPage::on_pushButton_223_clicked()
     QDesktopServices::openUrl(QUrl(link));
 }
 //Gsave
-void ShoppingPage::on_pushButton_231_clicked()
-{
-    QString link="https://bitcointalk.org/index.php?topic=2429913.0";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_232_clicked()
-{
-    QString link="https://discord.gg/PSb7GuP";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_233_clicked()
-{
-    QString link="https://bitcointalk.org/index.php?topic=2429913.0";
-    QDesktopServices::openUrl(QUrl(link));
-}
+//void ShoppingPage::on_pushButton_231_clicked()
+//{
+//    QString link="https://bitcointalk.org/index.php?topic=2429913.0";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
+//void ShoppingPage::on_pushButton_232_clicked()
+//{
+//    QString link="https://discord.gg/PSb7GuP";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
+//void ShoppingPage::on_pushButton_233_clicked()
+//{
+//    QString link="https://bitcointalk.org/index.php?topic=2429913.0";
+//   QDesktopServices::openUrl(QUrl(link));
+//}
 //HYP
 void ShoppingPage::on_pushButton_241_clicked()
 {
@@ -635,38 +635,38 @@ void ShoppingPage::on_pushButton_253_clicked()
     QDesktopServices::openUrl(QUrl(link));
 }
 //Xcoin
-void ShoppingPage::on_pushButton_261_clicked()
-{
-    QString link="http://x-coin.info/";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_262_clicked()
-{
-    QString link="https://discord.gg/MThyEqQ";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_263_clicked()
-{
-    QString link="https://bitcointalk.org/index.php?topic=969896.0";
-    QDesktopServices::openUrl(QUrl(link));
-}
+//void ShoppingPage::on_pushButton_261_clicked()
+//{
+//    QString link="http://x-coin.info/";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
+//void ShoppingPage::on_pushButton_262_clicked()
+//{
+//    QString link="https://discord.gg/MThyEqQ";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
+//void ShoppingPage::on_pushButton_263_clicked()
+//{
+//    QString link="https://bitcointalk.org/index.php?topic=969896.0";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
 //STC
-void ShoppingPage::on_pushButton_271_clicked()
-{
-    QString link="https://solar2crypto.vmpr.nl/";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_272_clicked()
-{
-    QString link="https://discord.gg/mkE3nwZ";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_273_clicked()
-{
-    QString link="https://youtu.be/fBJzg7IUE30";
-    QDesktopServices::openUrl(QUrl(link));
-}
-//SAT2
+//void ShoppingPage::on_pushButton_271_clicked()
+//{
+//   QString link="https://solar2crypto.vmpr.nl/";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
+//void ShoppingPage::on_pushButton_272_clicked()
+//{
+//    QString link="https://discord.gg/mkE3nwZ";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
+//void ShoppingPage::on_pushButton_273_clicked()
+//
+//    QString link="https://youtu.be/fBJzg7IUE30";
+//   QDesktopServices::openUrl(QUrl(link));
+//}
+//SAT3
 void ShoppingPage::on_pushButton_281_clicked()
 {
     QString link="https://bitcointalk.to/index.php?topic=2334220.0";
@@ -683,21 +683,21 @@ void ShoppingPage::on_pushButton_283_clicked()
     QDesktopServices::openUrl(QUrl(link));
 }
 //RBLT
-void ShoppingPage::on_pushButton_291_clicked()
-{
-    QString link="https://bitcoingarden.org/forum/index.php?topic=26019.0";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_292_clicked()
-{
-    QString link="https://discord.gg/b6myWHv";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void ShoppingPage::on_pushButton_293_clicked()
-{
-    QString link="https://bitcointalk.org/index.php?topic=2768822.0;all";
-    QDesktopServices::openUrl(QUrl(link));
-}
+//void ShoppingPage::on_pushButton_291_clicked()
+//{
+//   QString link="https://bitcoingarden.org/forum/index.php?topic=26019.0";
+//   QDesktopServices::openUrl(QUrl(link));
+//}
+//void ShoppingPage::on_pushButton_292_clicked()
+//{
+//    QString link="https://discord.gg/b6myWHv";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
+//void ShoppingPage::on_pushButton_293_clicked()
+//{
+//    QString link="https://bitcointalk.org/index.php?topic=2768822.0;all";
+//    QDesktopServices::openUrl(QUrl(link));
+//}
 //GDC
 void ShoppingPage::on_pushButton_331_clicked()
 {

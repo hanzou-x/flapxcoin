@@ -349,14 +349,14 @@ void OverviewPage::lockWalletToggle()
         dlg.setModel(walletModel);
         if(dlg.exec() == QDialog::Accepted)
         {
-            ui->unlockWalletActionNew->setText("Lock Wallet");
+            ui->unlockWalletActionNew->setText("Lock FlapX");
         }
     }
     else
     {
         // model->setWalletLocked(true);
         walletModel->setWalletLocked(true);
-        ui->unlockWalletActionNew->setText("Unlock Wallet");
+        ui->unlockWalletActionNew->setText("Unlock FlapX");
     }
 }
 

@@ -85,13 +85,13 @@ private slots:
 
     void on_pushButton_113_clicked();
 
-    void on_pushButton_121_clicked();
+    //void on_pushButton_121_clicked();
 
     void on_pushButton_122_clicked();
 
     void on_pushButton_123_clicked();
 
-    void on_pushButton_124_clicked();
+    //void on_pushButton_124_clicked();
 
     void on_pushButton_131_clicked();
 
@@ -133,11 +133,11 @@ private slots:
 
     void on_pushButton_223_clicked();
 
-    void on_pushButton_231_clicked();
+    //void on_pushButton_231_clicked();
 
-    void on_pushButton_232_clicked();
+    //void on_pushButton_232_clicked();
 
-    void on_pushButton_233_clicked();
+    //void on_pushButton_233_clicked();
 
     void on_pushButton_241_clicked();
 
@@ -151,17 +151,17 @@ private slots:
 
     void on_pushButton_253_clicked();
 
-    void on_pushButton_261_clicked();
+    //void on_pushButton_261_clicked();
 
-    void on_pushButton_262_clicked();
+    //void on_pushButton_262_clicked();
 
-    void on_pushButton_263_clicked();
+    //void on_pushButton_263_clicked();
 
-    void on_pushButton_271_clicked();
+    //void on_pushButton_271_clicked();
 
-    void on_pushButton_272_clicked();
+    //void on_pushButton_272_clicked();
 
-    void on_pushButton_273_clicked();
+    //void on_pushButton_273_clicked();
 
     void on_pushButton_281_clicked();
 
@@ -169,11 +169,11 @@ private slots:
 
     void on_pushButton_283_clicked();
 
-    void on_pushButton_291_clicked();
+    //void on_pushButton_291_clicked();
 
-    void on_pushButton_292_clicked();
+    //void on_pushButton_292_clicked();
 
-    void on_pushButton_293_clicked();
+    //void on_pushButton_293_clicked();
 
     void on_pushButton_331_clicked();
 
