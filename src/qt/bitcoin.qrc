@@ -129,4 +129,11 @@
         <file>themes/flapxcoin/b1.png</file>
         <file>themes/flapxcoin/o1.png</file>
     </qresource>
+    <qresource prefix="/qt/art">
+        <file>art/flapwork.png</file>
+        <file>art/logo1.png</file>
+        <file>art/nibyx.png</file>
+        <file>art/flying-blurb.png</file>
+        <file>art/lcw.png</file>
+    </qresource>
 </RCC>
