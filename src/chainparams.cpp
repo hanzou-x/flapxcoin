@@ -89,15 +89,9 @@ public:
         vSeeds.push_back(CDNSSeedData("Explorer", "159.65.37.70"));
         vSeeds.push_back(CDNSSeedData("Pool", "167.99.11.100"));
         vSeeds.push_back(CDNSSeedData("Community-Node-US-E", "159.203.92.66"));
-        vSeeds.push_back(CDNSSeedData("Community-Node-US-W", "178.128.184.210"));
-        vSeeds.push_back(CDNSSeedData("Community-Node-Bangladore", "139.59.39.255"));
         vSeeds.push_back(CDNSSeedData("Community-Node-Singapore", "206.189.33.55"));
-        vSeeds.push_back(CDNSSeedData("Community-Node-Amsterdam", "188.166.73.116"));
         vSeeds.push_back(CDNSSeedData("Community-Node-UK", "178.128.40.35"));
-        vSeeds.push_back(CDNSSeedData("Community-Node-US-E-2", "206.189.226.95"));
-        vSeeds.push_back(CDNSSeedData("Community-Node-Frankfurt", "46.101.111.50"));
-        vSeeds.push_back(CDNSSeedData("Community-Node-Toronto", "167.99.179.149"));
-        vSeeds.push_back(CDNSSeedData("Community-Node-UK-2", "178.128.164.219"));
+
 	
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75); //X
